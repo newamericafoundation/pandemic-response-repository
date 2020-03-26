@@ -1,5 +1,11 @@
-# opencoronavirus
+# New America Open COVID Project List
 [![CC BY 4.0][cc-by-shield]][cc-by]
+
+[New America](https://www.newamerica.org/) is maintaining a running list of all government open source projects responding to the novel Coronavirus.
+
+Governments across the globe are responding to the COVID-19 pandemic by creating critical resources for their people. Many of these governments are providing their work as open source repositories, and other governments have used that work as a starting point for their response efforts. However, the discovery of these projects is difficult – open source repositories are being shared via closed channels like Slack groups or email lists, or through social networks like Twitter. Our research into open source software for government use has shown that discovery of existing OSS tools is one of the larger barriers to using more OSS in the government context.
+
+To facilitate in the response to the COVID-19 pandemic, we are managing this centralized resource hub where all of these projects will be catalogued for governments in need to discover.
 
 
 | Title                                                                            | Summary                                                                                                                                                                                                                                                                                                                                                                                                                                          | Type of product         | Platform        | Organizing org                                                        | Initial audience       | Link to repo                                                    | Link to live product                                                                              | Main PoC                            | Link to community                 | License                  | i18n? | Contributor Guides | Documentation? | Forks |
