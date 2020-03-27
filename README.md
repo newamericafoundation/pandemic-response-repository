@@ -29,6 +29,38 @@ To facilitate in the response to the COVID-19 pandemic, we are managing this cen
 | Find COVID Testing                                                               | Map to make it easy to locate and crowd source COVID-19 testing locations                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Local service directory | Web             | Coders Against COVID                                                  |                        | https://github.com/codersagainstcovidorg/covid19testing-map     | http://findcovidtesting.com                                                                       |                                     |                                                                                        | GPL-3.0                  | No                 | No             |
 | Splunk Coronavirus Dashboard                                                     | This project includes an app that allows users to visualize and analyze information about COVID-19 using data made publicly-available by Johns Hopkins University.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                         |                 |                                                                       |                        | https://github.com/splunk/corona_virus                          | https://covid-19.splunkforgood.com/coronavirus__covid_19_                                         |                                     |                                                                                        | Apache-2.0               | No                 | Yes            |
 
+### Reading the Methods online
+
+You’re presently looking at the Open COVID GitHub (code) repository. Please [visit the main page](https://newamericafoundation.github.io/open-covid/) to view the project list online.
+
+### Contributing to Open COVID
+For more information on contributing to Open COVID, see [CONTRIBUTING.md](https://github.com/newamericafoundation/open-covid/blob/master/CONTRIBUTING.md). If you would like to suggest a new project be added to the collection, [please use this Google form]().
+
+### Running the Open COVID website on your local machine
+
+You will need [Ruby](https://www.ruby-lang.org) ( > version 2.1.5 ). You may consider using a Ruby version manager such as [rbenv](https://github.com/sstephenson/rbenv) or [rvm](https://rvm.io/) to help ensure that Ruby version upgrades don’t mean all your [gems](https://rubygems.org/) will need to be rebuilt.
+
+On OS X, you can use [Homebrew](http://brew.sh/) to install Ruby in `/usr/local/bin`, which may require you to update your `$PATH` environment variable:
+
+```shell
+$ brew update
+$ brew install ruby
+```
+
+To serve 18F Methods locally, using `methods` as the name of your new repository:
+Run each of the following steps to get the site up and running.
+
+```shell
+$ git clone git@github.com:newamericafoundation/open-covid
+$ cd methods
+$ bundle install
+$ bundle exec jekyll serve
+```
+
+You should be able to see the site at: `http://localhost:4000/`
+
+### License
+
 This work is licensed under a [Creative Commons Attribution 4.0 International
 License][cc-by].
 

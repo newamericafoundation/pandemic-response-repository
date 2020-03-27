@@ -1,1 +1,50 @@
-theme: jekyll-theme-cayman
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+name: Open COVID
+exclude:
+- CONTRIBUTING.md
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- go
+- vendor
+
+permalink: pretty
+highlighter: rouge
+
+sass:
+  style: compressed
+
+collections:
+  oss-projects:
+    output: true
+#    permalink: /:path/
+
+site:
+  title: Open COVID
+
+page_gen:
+  - index_files: false
+  - data: 'projects'
+  - template: <<name of the template to use to generate the page>>
+  - name: 'title'
+
+description: Open COVID is a maintained list of open source projects usable by governments.
+
+repos:
+- name: Open COVID
+  description: Main repository
+  url: https://github.com/newamericafoundation/open-covid
+
+jekyll_get:
+  - data: releases
+    json: 'https://api.github.com/repos/newamericafoundation/open-covid/releases'
+
+plugins:
+  - jekyll-last-modified-at
+  - jemoji
+  - jekyll-mentions
+  - jekyll-redirect-from
+  - jekyll-datapage-generator

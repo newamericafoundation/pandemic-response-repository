@@ -1,0 +1,63 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} - Open COVID </title>
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-16x16.png" sizes="16x16" />
+
+  <meta name="description" content="{% if page.description %}{{ page.description | truncate: 155 }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta property="og:image" content="https://newamericafoundation.github.io/open-covid/images/NA-Logo.png" />
+  <meta property="og:site_name" content="New America" />
+  <meta property="og:description" content="{% if page.description %}{{ page.description | truncate: 155 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://newamericafoundation.github.io/open-covid/{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" value="summary">
+  <meta name="twitter:site" content="@DIGI_NewAmerica">
+  <meta name="twitter:creator" content="@DIGI_NewAmerica">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description | truncate: 200 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:image" content="https://newamericafoundation.github.io/open-covid/NA-Logo.png" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/js/uswds.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/css/uswds.css">
+  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/styles.css">
+
+  {% comment %}
+  {% if page.layout == "page" %}
+  {% endcomment %}
+    <style>
+      @page { 
+        size: portrait; 
+        margin: 1in;
+      }
+    </style>
+  {% comment %}
+  {% else %}
+    <style>
+      @page { 
+        size: landscape; 
+        margin: 0;
+        padding: 1px;
+      }
+    </style>  
+  {% endif %}
+  {% endcomment %}
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WCRJ8BM');</script>
+  <!-- End Google Tag Manager -->
+</head>
