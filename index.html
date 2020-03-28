@@ -10,41 +10,20 @@ layout: page
 </div>
 <div class="usa-section usa-grid">
 
-    <h1>New America Open COVID Project List</h1>
-    <p><a href="http://creativecommons.org/licenses/by/4.0/" rel="nofollow"><img alt="CC BY 4.0" src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" style="max-width:100%;"></a></p>
+  <h1>New America Open COVID Project List</h1>
+  <p><a href="http://creativecommons.org/licenses/by/4.0/" rel="nofollow"><img alt="CC BY 4.0" src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" style="max-width:100%;"></a></p>
 
-    <p><a href="https://www.newamerica.org/">New America</a> is maintaining a running list of all government open source projects responding to the novel Coronavirus.
+  <p><a href="https://www.newamerica.org/">New America</a> is maintaining a running list of all government open source projects responding to the novel Coronavirus.
 
-    <p>Governments across the globe are responding to the COVID-19 pandemic by creating critical resources for their people. Many of these governments are providing their work as open source repositories, and other governments have used that work as a starting point for their response efforts. However, the discovery of these projects is difficult – open source repositories are being shared via closed channels like Slack groups or email lists, or through social networks like Twitter. Our research into open source software for government use has shown that discovery of existing OSS tools is one of the larger barriers to using more OSS in the government context.
+  <p>Governments across the globe are responding to the COVID-19 pandemic by creating critical resources for their people. Many of these governments are providing their work as open source repositories, and other governments have used that work as a starting point for their response efforts. However, the discovery of these projects is difficult – open source repositories are being shared via closed channels like Slack groups or email lists, or through social networks like Twitter. Our research into open source software for government use has shown that discovery of existing OSS tools is one of the larger barriers to using more OSS in the government context.
 
-    <p>To facilitate in the response to the COVID-19 pandemic, we are managing this centralized resource hub where all of these projects will be catalogued for governments in need to discover. This is a joint project between the Digital Impact and Governance Initiative (DIGI) and Public Interest Technology (PIT) teams at New America.
+  <p>To facilitate in the response to the COVID-19 pandemic, we are managing this centralized resource hub where all of these projects will be catalogued for governments in need to discover. This is a joint project between the Digital Impact and Governance Initiative (DIGI) and Public Interest Technology (PIT) teams at New America.
+    
   <ul>
     {% for project in site.data.projects %}
     <li>{{project.Title}}</li>
     {% endfor %}
   </ul>
-  {% comment %}
-  <!-- {% for category in site.data.categories %}
-    <section class="usa-grid category usa-section category--{{ category.category_name | downcase }}" id="{{ category.category_name | downcase }}">
-      <h1 class="category--title category--{{ category.category_name | downcase }}--title">{{ category.category_name }}</h1>
-      <div class="usa-width-two-thirds">
-        <div class="category--header usa-content">
-          <p class="category--subtitle">{{ category.category_description }}</p>
-          <p>{{ category.category_info }}</p>
-          <a href="{{ site.baseurl }}/{{ category.category_name | downcase }}" class="a-see-all">See all {{ category.category_name | downcase }} methods</a>
-        </div>
-      </div>
-      <div class="usa-width-one-third methods-listing">
-        <h2>Methods include</h2>
-        <ul>
-          {% for method in category.methods %}
-          <li><a href="{{ site.baseurl }}/{{ method | slugify }}">{{ method }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-    </section>
-  {% endfor %} -->
-  {% endcomment %}
 
   <h3>Contributing to Open COVID</h3>
   <p>For more information on contributing to Open COVID, see <a href="https://github.com/newamericafoundation/open-covid/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a>. If you would like to suggest a new project be added to the collection, <a href="">please use this Google form</a>.
