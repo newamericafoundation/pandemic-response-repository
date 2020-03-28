@@ -11,19 +11,30 @@ layout: page
 <div class="usa-section usa-grid">
 
   <h1>New America Open COVID Project List</h1>
-  <p><a href="http://creativecommons.org/licenses/by/4.0/" rel="nofollow"><img alt="CC BY 4.0" src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" style="max-width:100%;"></a></p>
+  <p><a href="https://www.newamerica.org/">New America</a> is maintaining a running list of all government open source projects responding to the novel Coronavirus.</p>
 
-  <p><a href="https://www.newamerica.org/">New America</a> is maintaining a running list of all government open source projects responding to the novel Coronavirus.
+  <p>Governments across the globe are responding to the COVID-19 pandemic by creating critical resources for their people. Many of these governments are providing their work as open source repositories, and other governments have used that work as a starting point for their response efforts. However, the discovery of these projects is difficult – open source repositories are being shared via closed channels like Slack groups or email lists, or through social networks like Twitter. Our research into open source software for government use has shown that discovery of existing OSS tools is one of the larger barriers to using more OSS in the government context.</p>
 
-  <p>Governments across the globe are responding to the COVID-19 pandemic by creating critical resources for their people. Many of these governments are providing their work as open source repositories, and other governments have used that work as a starting point for their response efforts. However, the discovery of these projects is difficult – open source repositories are being shared via closed channels like Slack groups or email lists, or through social networks like Twitter. Our research into open source software for government use has shown that discovery of existing OSS tools is one of the larger barriers to using more OSS in the government context.
+  <p>To facilitate in the response to the COVID-19 pandemic, we are managing this centralized resource hub where all of these projects will be catalogued for governments in need to discover. This is a joint project between the Digital Impact and Governance Initiative (DIGI) and Public Interest Technology (PIT) teams at New America.</p>
 
-  <p>To facilitate in the response to the COVID-19 pandemic, we are managing this centralized resource hub where all of these projects will be catalogued for governments in need to discover. This is a joint project between the Digital Impact and Governance Initiative (DIGI) and Public Interest Technology (PIT) teams at New America.
-    
-  <ul>
-    {% for project in site.data.projects %}
-    <li>{{project.Title}}</li>
-    {% endfor %}
-  </ul>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Project title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for project in site.data.projects %}
+      <tr>
+        <th scope="row">{{project.title}}</th>
+        <td>{{project.summary}}</td>
+        <td>{{project.organizing-org}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 
   <h3>Contributing to Open COVID</h3>
   <p>For more information on contributing to Open COVID, see <a href="https://github.com/newamericafoundation/open-covid/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a>. If you would like to suggest a new project be added to the collection, <a href="">please use this Google form</a>.
