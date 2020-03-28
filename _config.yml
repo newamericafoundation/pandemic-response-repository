@@ -47,4 +47,4 @@ plugins:
   - jemoji
   - jekyll-mentions
   - jekyll-redirect-from
-  - jekyll-datapage-generator
+#  - jekyll-datapage-generator
