@@ -4,16 +4,16 @@
   <body class="layout--card">
     {% include header.html %}
     <main id="main" role="main">
-      <section class="category category--{{page.category | downcase }} usa-section" id="{{page.category | downcase }}">
+      <section class="category usa-section" id="">
         <header class="category--header">
           <div class="usa-grid">
-            {% assign method_category = site.pages | where: "title", page.category | first %}
-            <h1 class="category--title">{{method_category.title | capitalize }}</h1>
-            <p class="category--subtitle">{{method_category.description}}</p>
+            <h1 class="category--title">{{page.title}}</h1>
+            <p class="category--subtitle">{{page.link-to-source}}</p>
           </div>
         </header>
         <div class="usa-grid">
-          {% include method-print-header.html %} {% include method.html %}
+          {% comment %} {% include method-print-header.html %} 
+          {% include method.html %}{% endcomment %}
         </div>
       </section>
     </main>

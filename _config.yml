@@ -26,10 +26,9 @@ site:
   title: Open COVID
 
 page_gen:
-  - index_files: false
   - data: 'projects'
-  - template: <<name of the template to use to generate the page>>
-  - name: 'title'
+    template: 'projects'
+    name: 'title'
 
 description: Open COVID is a maintained list of open source projects usable by governments.
 
