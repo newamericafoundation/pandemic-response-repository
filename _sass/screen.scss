@@ -3,7 +3,7 @@ body {
   font-size: $base-font-size;
 }
 
-.methods-listing ul{ 
+.open-covid-listing ul{ 
   padding: 0; 
   list-style-type: none;
 }
@@ -17,7 +17,7 @@ body {
     padding: 0 20px 60px;
 }
 
-.layout--page.layout--methods main {
+.layout--page.layout--open-covid main {
   padding: 0;
   max-width: none;
 }
@@ -26,7 +26,7 @@ body {
 @media screen and (min-width: 853.33px) {
 
   .layout--page main { padding-right: 25%; }
-  .layout--page.layout--methods main { padding-right: 0; }
+  .layout--page.layout--open-covid main { padding-right: 0; }
 
   h3 {
     font-size: $h4-font-size;
