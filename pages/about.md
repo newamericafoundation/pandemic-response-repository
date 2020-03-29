@@ -11,7 +11,7 @@ Governments across the globe are responding to the COVID-19 pandemic by creating
 To facilitate in the response to the COVID-19 pandemic, we are managing this centralized resource hub where all of these projects will be catalogued for governments in need to discover. This is a joint project between the Digital Impact and Governance Initiative (DIGI) and Public Interest Technology (PIT) teams at New America.
 
 ## Contributing to Open COVID
-For more information on contributing to Open COVID, see [CONTRIBUTING.md](https://github.com/newamericafoundation/open-covid/blob/master/CONTRIBUTING.md). If you would like to suggest a new project be added to the collection, [please use this Google form]().
+For more information on contributing to Open COVID, see [CONTRIBUTING.md](https://github.com/newamericafoundation/open-covid/blob/master/CONTRIBUTING.md). If you would like to suggest a new project be added to the collection, [please use this Google form](). If you have general questions about the project, send us an email at [DIGI@newamerica.org](mailto:DIGI@newamerica.org).
 
 ## License
 
