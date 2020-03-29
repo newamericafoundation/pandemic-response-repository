@@ -17,11 +17,6 @@ highlighter: rouge
 sass:
   style: compressed
 
-collections:
-  oss-projects:
-    output: true
-#    permalink: /:path/
-
 site:
   title: Open COVID
 
