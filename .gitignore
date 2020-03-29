@@ -1,0 +1,6 @@
+_site/*
+!_site/projects/
+.sass-cache/
+.DS_store
+.*.swp
+.ruby-version

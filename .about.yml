@@ -1,0 +1,17 @@
+project: "Open COVID"
+name: open-covid
+github:
+- newamericafoundation/open-covid
+description: Open COVID is a maintained list of open source projects usable by governments.
+stage: beta
+milestones:
+contact:
+- newamericafoundation/open-covid/issues
+team: marklerner
+licenses:
+  open-covid: CC-BY-4.0
+links:
+- https://newamericafoundation.github.io/open-covid/
+blog:
+
+status:
