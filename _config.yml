@@ -27,6 +27,8 @@ page_gen:
 
 description: Open COVID is a maintained list of open source projects usable by governments.
 
+url: https://newamericafoundation.github.io/open-covid/
+
 repos:
 - name: Open COVID
   description: Main repository
