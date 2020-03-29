@@ -1,5 +1,4 @@
-_site/*
-!_site/projects/
+_site/
 .sass-cache/
 .DS_store
 .*.swp
