@@ -1,6 +1,6 @@
 
 // Typography
-$font-sans: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$font-sans: 'Platform', 'Circular', 'Lyon', 'Arial', 'Palatino', sans-serif;
 
 
 $h1-font-size: 3.8rem;
@@ -28,7 +28,7 @@ $color-gray-dark: #333;
 $color-gray: #ddd;
 
 // 18F brand colors
-// TODO: replace with NA brand colors
+// TODO: Update to NA brand colors
 $color-light:        #b3efff; // $color-light / $color-secondary-light
 $color-bright:       #00cfff; // $color-bright / $color-secondary
 $color-medium:       #046b99; // $color-medium / $color-primary
@@ -37,7 +37,7 @@ $color-dark:         #1C304A; // $color-dark / $color-primary-dark
 $color-bright-hover: #00A7CE;
 $color-medium-hover: #00547A;
 
-$color-gray-light: #f1f1f1; // 18F brand color $color-gray-lightest
+$color-gray-light: #f7f4f2; // NA brand color $color-gray-lightest
 $color-gray-lightest: #fafafa; // 18F brand color $color-gray-hover
 $color-inverse: #fff; // 18F brand color
-$color-black: #000; // 18F brand color
+$color-black: #333333; // NA brand color
