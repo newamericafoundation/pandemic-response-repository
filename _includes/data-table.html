@@ -12,7 +12,7 @@
     <tbody>
       {% for project in site.data.projects %}
       <tr>
-        <th scope="row"><a href="{{ site.baseurl }}/projects/{{ project.title | slugify }}">{{project.title}}</a></th>
+        <th scope="row"><a href="{{ site.baseurl }}/projects/{{ project.title | slugify: "latin" }}">{{project.title}}</a></th>
         <td>{{project.summary}}</td>
         <td>{{project.organizing-org | default: "N/A"}}</td>
       </tr>
