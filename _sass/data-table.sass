@@ -1,0 +1,28 @@
+$color-table-border: #e6e6e6
+$color-table-border--columns: #00000005
+$color-row-striping: white
+
+.data-table
+  border: 1px solid $color-table-border
+  border-spacing: 0
+  font-size: 15px
+
+  thead
+    background-color: $color-row-striping
+    font-weight: bold
+    text-align: left
+
+    td, th
+      padding: 15px
+
+  tbody
+    tr:nth-child(2n)
+      background-color: $color-row-striping
+
+    td, th
+      text-align: left
+      padding: 10px 15px
+      font-weight: inherit
+      border-top: 1px solid $color-table-border
+    td
+      border-left: 1px solid $color-table-border--columns
