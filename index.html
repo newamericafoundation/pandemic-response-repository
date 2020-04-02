@@ -13,23 +13,6 @@ layout: page
   <h1>New America Open COVID Project List</h1>
   <p><a href="https://www.newamerica.org/">New America</a> is maintaining a running list of all government open source projects responding to the novel Coronavirus.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Project title</th>
-        <th scope="col">Description</th>
-        <th scope="col">Type of project</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for project in site.data.projects %}
-      <tr>
-        <th scope="row"><a href="{{ site.baseurl }}/projects/{{ project.title | slugify: "latin" }}">{{project.title}}</a></th>
-        <td>{{project.summary}}</td>
-        <td>{{project.type-of-product | default: "N/A"}}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+  {% include data-table.html %}
 
 </div>

@@ -1,24 +1,18 @@
-<div class="figure">
-  <h1 class="figure__title">New America Open COVID Project List</h1>
-
-  <table class="data-table">
-    <thead>
-      <tr>
-        <th scope="col">Project title</th>
-        <th scope="col">Description</th>
-        <th scope="col">Source</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for project in site.data.projects %}
-      <tr>
-        <th scope="row"><a href="{{ site.baseurl }}/projects/{{ project.title | slugify: "latin" }}">{{project.title}}</a></th>
-        <td>{{project.summary}}</td>
-        <td>{{project.organizing-org | default: "N/A"}}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-
-  <div class="figure__org-name">New America</div>
-</div>
+<table class="data-table">
+  <thead>
+    <tr>
+      <th scope="col">Project title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type of product</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for project in site.data.projects %}
+    <tr>
+      <th scope="row"><a href="{{ site.baseurl }}/projects/{{ project.title | slugify: "latin" }}">{{project.title}}</a></th>
+      <td>{{project.summary}}</td>
+      <td>{{project.type-of-product | default: "N/A"}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
