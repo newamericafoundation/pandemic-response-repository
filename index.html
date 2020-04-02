@@ -18,7 +18,7 @@ layout: page
       <tr>
         <th scope="col">Project title</th>
         <th scope="col">Description</th>
-        <th scope="col">Source</th>
+        <th scope="col">Type of project</th>
       </tr>
     </thead>
     <tbody>
@@ -26,7 +26,7 @@ layout: page
       <tr>
         <th scope="row"><a href="{{ site.baseurl }}/projects/{{ project.title | slugify: "latin" }}">{{project.title}}</a></th>
         <td>{{project.summary}}</td>
-        <td>{{project.organizing-org | default: "N/A"}}</td>
+        <td>{{project.type-of-product | default: "N/A"}}</td>
       </tr>
       {% endfor %}
     </tbody>
