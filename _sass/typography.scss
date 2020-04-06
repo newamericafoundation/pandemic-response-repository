@@ -1,0 +1,33 @@
+body {
+	color: $color-black;
+	font-family: $font-sans, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-size: $base-font-size;
+}
+
+a {
+	color: $color-black;
+	text-decoration: underline $color-teal;
+	text-decoration-skip-ink: auto;
+	transition: all 0.2s ease-in;
+	&:hover {
+		color: $color-black;
+		text-decoration: underline rgba(255, 255, 255, 0);
+	}
+	&:visited {
+		color: $color-black;
+	}
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4 {
+	font-family: $font-sans;
+}
+
+h1.promo {
+	font-size: $h1-font-size;
+	color: white;
+}
