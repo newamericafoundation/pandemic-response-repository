@@ -31,3 +31,8 @@ h1.promo {
 	font-size: $h1-font-size;
 	color: white;
 }
+
+p {
+	margin-top: 0;
+	margin-bottom: $h3-font-size;
+}

@@ -11,7 +11,7 @@
 	max-width: 1024px;
 	margin: 0 auto;
 	box-sizing: border-box;
-	padding: 0 20px 60px;
+	padding: 60px 25% 60px 15px;
 }
 
 .layout--page.layout--open-covid main {
@@ -19,23 +19,37 @@
 	max-width: none;
 }
 
-@media screen and (min-width: 853.33px) {
+@media screen and (max-width: 853.33px) {
 	.layout--page main {
-		padding-right: 25%;
-	}
-	.layout--page.layout--open-covid main {
-		padding-right: 0;
-	}
-
-	h3 {
-		font-size: $h4-font-size;
-		font-weight: 400;
-		margin-top: 0;
-		margin-bottom: 0.6rem;
+		padding: 40px 15px;
 	}
 }
 
 .hero-container {
 	background-color: $color-black;
 	padding: $h2-font-size 0;
+}
+
+//Project Styles
+.project {
+	.project--source-link {
+		margin-bottom: $h2-font-size;
+		text-decoration: underline $color-teal;
+		text-decoration-skip-ink: auto;
+		transition: all 0.2s ease-in;
+		font-weight: 300;
+		&:hover {
+			color: $color-black;
+			text-decoration: underline rgba(255, 255, 255, 0);
+		}
+	}
+	.project--label {
+		font-family: $font-sans;
+		font-size: $tiny-font-size;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		display: block;
+		line-height: $base-font-size;
+	}
 }
