@@ -3,16 +3,16 @@
 
 [New America](https://www.newamerica.org/) is maintaining a running list of all government open source projects responding to the novel Coronavirus.
 
-Governments across the globe are responding to the COVID-19 pandemic by creating critical resources for their people. Many of these governments are providing their work as open source repositories, and other governments have used that work as a starting point for their response efforts. However, the discovery of these projects is difficult – open source repositories are being shared via closed channels like Slack groups or email lists, or through social networks like Twitter. Our research into open source software for government use has shown that discovery of existing OSS tools is one of the larger barriers to using more OSS in the government context.
+The open source projects catalogued in the Pandemic Response Repository are powering more efficient and effective public sector responses to the coronavirus pandemic. Many governments are struggling to find the right solutions and to share technology and content they’ve developed with others in need. The solutions listed here are reusable, easily shared among agencies, municipalities and countries, and can be adapted to local needs. The repository will be updated daily based on research by our team and submissions from around the world. We have not undertaken an independent code review of each solution.
 
-To facilitate in the response to the COVID-19 pandemic, we are managing this centralized resource hub where all of these projects will be catalogued for governments in need to discover. This is a joint project between the Digital Impact and Governance Initiative (DIGI) and Public Interest Technology (PIT) teams at New America.
+The Pandemic Response Repository is the first phase of a more comprehensive Open Source Framework researched and developed by New America to strengthen and modernize government institutions. Across the public sector, private sector, and civil society, there is growing momentum to create open source, digital public goods that can deliver broad benefits for society and be easily modified to meet the needs of different communities. This work is intended to help build that movement. The Pandemic Response Repository is a joint project of the Digital Impact and Governance Initiative (DIGI) and Public Interest Technology (PIT) teams at New America.
 
 ### Reading the Projects online
 
 You’re presently looking at the Pandemic Response Repository GitHub (code) repository. Please [visit the main page](https://newamericafoundation.github.io/pandemic-response-repository/) to view the project list online.
 
 ### Contributing to Pandemic Response Repository
-For more information on contributing to Pandemic Response Repository, see [CONTRIBUTING.md](https://github.com/newamericafoundation/pandemic-response-repository/blob/master/CONTRIBUTING.md). If you would like to suggest a new project be added to the collection, [please use this Google form](). If you have general questions about the project, send us an email at [DIGI@newamerica.org](mailto:DIGI@newamerica.org).
+If you would like to suggest a new project be added to the collection, [please use this Google form](https://docs.google.com/forms/d/e/1FAIpQLSfQNld7gWcEc8D8tLwyVqUKePMUmZUUKeH41Fx8RXyjQtjWOQ/viewform?usp=sf_link). If you have general questions about the project, send us an email at [DIGI@newamerica.org](mailto:DIGI@newamerica.org). For more information on the contributing to the source code to the Pandemic Response Repository, see [our source code repository for this website](https://github.com/newamericafoundation/pandemic-response-repository/).
 
 ### Running the Pandemic Response Repository website on your local machine
 
