@@ -17,7 +17,7 @@
   <meta property="og:site_name" content="New America" />
   <meta property="og:description" content="Pandemic Response Repository is a maintained list of open source projects usable by governments.">
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://newamericafoundation.github.io/pandemic-response-repository//pandemic-response-repository/projects/covid-19-patients-self-monitoring-at-home-via-forms-sent-by-sms/" />
+  <meta property="og:url" content="https://newamericafoundation.github.io/pandemic-response-repository/pandemic-response-repository/projects/covid-19-patients-self-monitoring-at-home-via-forms-sent-by-sms/" />
 
 
   <!-- Twitter Card data -->
@@ -36,17 +36,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
     function Clear() {
-     $('#projectsTable tr').show();
+      $('#projectsTable tr').show();
+
+      $('input').removeClass('usa-button-active');
+      $('input[value|="All Topics"]').addClass('usa-button-active');
     }
 
     function Search(word) {
-      Clear();
+      $('#projectsTable tr').show();
 
       $('#projectsTable tr td.searchcol').each(function () {
          if ($(this).text().toLowerCase().indexOf(word.toLowerCase()) <= -1) {
               $(this).parent().hide();
          }
       });
+
+      $('input').removeClass('usa-button-active');
+      $('input[value|=' + word + ']').addClass('usa-button-active');
     }
   </script>
 
