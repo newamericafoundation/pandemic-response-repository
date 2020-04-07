@@ -27,7 +27,7 @@ page_gen:
 
 description: Pandemic Response Repository is a maintained list of open source projects usable by governments.
 
-baseurl: /open-covid
+baseurl: /pandemic-response-repository
 
 repos:
 - name: Pandemic Response Repository
