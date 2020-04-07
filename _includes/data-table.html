@@ -3,7 +3,7 @@
     <tr>
       <th scope="col">Project title</th>
       <th scope="col">Description</th>
-      <th scope="col">Type of product</th>
+      <th scope="col">Project tags</th>
     </tr>
   </thead>
   <tbody>
@@ -11,7 +11,8 @@
     <tr>
       <th scope="row"><a href="{{ site.baseurl }}/projects/{{ project.title | slugify: "latin" }}">{{project.title}}</a></th>
       <td>{{project.summary}}</td>
-      <td class="tags">{{project.type-of-product | default: "N/A"}}</td>
+      <td>{{ project.tags | default: "N/A" }}</td>
+      <td class="searchcol" style="display: none;">{{project.topics | default: "N/A"}}</td>
     </tr>
     {% endfor %}
   </tbody>
