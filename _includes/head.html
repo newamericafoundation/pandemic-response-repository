@@ -1,87 +1,11 @@
 <head>
-<<<<<<< HEAD
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Pandemic Response Repository - {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-16x16.png" sizes="16x16" />
-
-  <meta name="description" content="{% if page.description %}{{ page.description | truncate: 155 }}{% else %}{{ site.description }}{% endif %}">
-
-  <!-- Open Graph data -->
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta property="og:image" content="https://newamericafoundation.github.io/pandemic-response-repository/images/NA-Logo.png" />
-  <meta property="og:site_name" content="New America" />
-  <meta property="og:description" content="{% if page.description %}{{ page.description | truncate: 155 }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://newamericafoundation.github.io/pandemic-response-repository{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
-
-
-  <!-- Twitter Card data -->
-  <meta name="twitter:card" value="summary">
-  <meta name="twitter:site" content="@DIGI_NewAmerica">
-  <meta name="twitter:creator" content="@DIGI_NewAmerica">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta name="twitter:description" content="{% if page.description %}{{ page.description | truncate: 200 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="twitter:image" content="https://newamericafoundation.github.io/pandemic-response-repository/NA-Logo.png" />
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/js/uswds.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/css/uswds.css">
-  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/styles.css">
-
-  <!-- Table filter setup -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script>
-    function Clear() {
-      $('#projectsTable tr').show();
-
-      $('input').removeClass('usa-button-active');
-      $('input[value|="All Topics"]').addClass('usa-button-active');
-    }
-
-    function Search(word) {
-      $('#projectsTable tr').show();
-
-      $('#projectsTable tr td.searchcol').each(function () {
-         if ($(this).text().toLowerCase().indexOf(word.toLowerCase()) <= -1) {
-              $(this).parent().hide();
-         }
-      });
-
-      $('input').removeClass('usa-button-active');
-      $('input[value|=' + word + ']').addClass('usa-button-active');
-    }
-  </script>
-
-  <style>
-    @page { 
-      size: portrait; 
-      margin: 1in;
-    }
-  </style>
-
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-368921-43"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-368921-43');
-  </script>
-  <!-- End Google Analytics -->
-=======
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<title>
-		{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
-		- Open COVID
+		Pandemic Response Repository - {% if page.title %}{{ page.title }}{%
+		else %}{{ site.title }}{% endif %}
 	</title>
 	<link
 		rel="icon"
@@ -108,7 +32,7 @@
 	/>
 	<meta
 		property="og:image"
-		content="https://newamericafoundation.github.io/open-covid/images/NA-Logo.png"
+		content="https://newamericafoundation.github.io/pandemic-response-repository/images/NA-Logo.png"
 	/>
 	<meta property="og:site_name" content="New America" />
 	<meta
@@ -118,7 +42,7 @@
 	<meta property="og:type" content="article" />
 	<meta
 		property="og:url"
-		content="https://newamericafoundation.github.io/open-covid/{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+		content="https://newamericafoundation.github.io/pandemic-response-repository{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
 	/>
 
 	<!-- Twitter Card data -->
@@ -135,10 +59,10 @@
 	/>
 	<meta
 		name="twitter:image"
-		content="https://newamericafoundation.github.io/open-covid/NA-Logo.png"
+		content="https://newamericafoundation.github.io/pandemic-response-repository/NA-Logo.png"
 	/>
 
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/js/uswds.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/js/uswds.min.js"></script>
 	<link
 		rel="stylesheet"
 		type="text/css"
@@ -154,6 +78,33 @@
 		type="text/css"
 		href="{{site.baseurl}}/css/styles.css"
 	/>
+
+	<!-- Table filter setup -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		function Clear() {
+			$("#projectsTable tr").show();
+
+			$("input").removeClass("usa-button-active");
+			$('input[value|="All Topics"]').addClass("usa-button-active");
+		}
+
+		function Search(word) {
+			$("#projectsTable tr").show();
+
+			$("#projectsTable tr td.searchcol").each(function () {
+				if (
+					$(this).text().toLowerCase().indexOf(word.toLowerCase()) <=
+					-1
+				) {
+					$(this).parent().hide();
+				}
+			});
+
+			$("input").removeClass("usa-button-active");
+			$("input[value|=" + word + "]").addClass("usa-button-active");
+		}
+	</script>
 
 	<style>
 		@page {
@@ -183,5 +134,4 @@
 		gtag("config", "UA-368921-43");
 	</script>
 	<!-- End Google Analytics -->
->>>>>>> removing USWDS js, adding NA CSS, removing deprecated class names and declarations from markup
 </head>

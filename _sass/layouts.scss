@@ -25,9 +25,32 @@
 	}
 }
 
+//Index Styles
 .hero-container {
-	background-color: $color-black;
-	padding: $h2-font-size 0;
+	padding-top: $h1-font-size;
+}
+
+//Overwriting USWDS Buttons
+input[type="submit"] {
+	font-family: $font-sans;
+	font-size: $tiny-font-size;
+	text-transform: uppercase;
+	color: $color-black;
+	background-color: $color-beige;
+	border: 1px solid $color-black;
+	padding: $small-font-size;
+	height: auto;
+	transition: all 0.15s ease-out;
+	&:hover {
+		color: white;
+		background-color: $color-black;
+		border-bottom: 1px solid $color-black;
+	}
+	&.usa-button-active {
+		color: white;
+		background-color: $color-black;
+		border-bottom: 1px solid $color-black;
+	}
 }
 
 //Project Styles
@@ -51,5 +74,8 @@
 		letter-spacing: 1px;
 		display: block;
 		line-height: $base-font-size;
+	}
+	p a {
+		font-weight: 300;
 	}
 }

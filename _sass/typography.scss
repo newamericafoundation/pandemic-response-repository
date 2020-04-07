@@ -1,6 +1,6 @@
 body {
 	color: $color-black;
-	font-family: $font-sans, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-family: "Circular", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	font-size: $base-font-size;
 }
 
@@ -28,11 +28,27 @@ h4 {
 }
 
 h1.promo {
-	font-size: $h1-font-size;
-	color: white;
+	font-family: "Platform", $font-sans;
+	font-size: $h2-font-size;
+	line-height: $h1-font-size;
+}
+
+@media screen and (max-width: 853.33px) {
+	h1.promo {
+		font-size: $h4-font-size;
+		line-height: $h3-font-size;
+	}
 }
 
 p {
 	margin-top: 0;
 	margin-bottom: $h3-font-size;
+}
+
+thead th {
+	font-family: $font-sans;
+	font-size: $tiny-font-size;
+	text-transform: uppercase;
+	color: $color-black;
+	letter-spacing: 1px;
 }

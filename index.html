@@ -1,49 +1,30 @@
 ---
 permalink: /
-title: Pandemic Response Repository
+title: Open COVID
 layout: page
 ---
-<<<<<<< HEAD
-<div class="usa-section intro-header">
-  <div class="usa-grid">
-    <p class="usa-font-lead no-print">A collection of open source digital resources to help governments respond to the Coronavirus.</p>
-  </div>
-=======
 
 <div class="hero-container">
 	<div class="usa-grid">
 		<h1 class="promo">
-			A running list of all government open source projects responding to
-			the novel Coronavirus.
+			A collection of open source digital resources to help governments
+			respond to the Coronavirus.
 		</h1>
 	</div>
->>>>>>> removing USWDS js, adding NA CSS, removing deprecated class names and declarations from markup
 </div>
 <div class="usa-section usa-grid">
-	<h2>New America Open COVID Project List</h2>
-	<p>
-		<a href="https://www.newamerica.org/">New America</a> is maintaining a
-		running list of all government open source projects responding to the
-		novel Coronavirus.
-	</p>
+	<input
+		class="usa-button-active"
+		type="submit"
+		value="All Topics"
+		onclick="Clear()"
+	/>
+	<input type="submit" value="Health" onclick="Search('Health')" />
+	<input type="submit" value="Information" onclick="Search('Information')" />
+	<input type="submit" value="Assistance" onclick="Search('Assistance')" />
+	<input type="submit" value="Tracking" onclick="Search('Tracking')" />
+	<input type="submit" value="Community" onclick="Search('Community')" />
+	<input type="submit" value="Research" onclick="Search('Research')" />
 
-<<<<<<< HEAD
-  <input class="usa-button-active" type="submit" value="All Topics" onclick="Clear()"/>
-  <input type="submit" value="Health" onclick="Search('Health')"/>
-  <input type="submit" value="Information" onclick="Search('Information')"/>
-  <input type="submit" value="Assistance" onclick="Search('Assistance')"/>
-  <input type="submit" value="Tracking" onclick="Search('Tracking')"/>
-  <input type="submit" value="Community" onclick="Search('Community')"/>
-  <input type="submit" value="Research" onclick="Search('Research')"/>
-=======
-<<<<<<< HEAD
-  <h1>Pandemic Response Repository of Open Source Digital Government Resources</h1>
-  <p>New America is maintaining a running list of all government open source projects responding to the novel Coronavirus.</p>
->>>>>>> removing USWDS js, adding NA CSS, removing deprecated class names and declarations from markup
-
-  {% include data-table.html %}
-
-=======
 	{% include data-table.html %}
->>>>>>> removing USWDS js, adding NA CSS, removing deprecated class names and declarations from markup
 </div>
