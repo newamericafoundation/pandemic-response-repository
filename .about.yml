@@ -1,17 +1,17 @@
-project: "Open COVID"
-name: open-covid
+project: "Pandemic Response Repository"
+name: pandemic-response-repository
 github:
-- newamericafoundation/open-covid
-description: Open COVID is a maintained list of open source projects usable by governments.
+- newamericafoundation/pandemic-response-repository
+description: Pandemic Response Repository is a maintained list of open source projects usable by governments.
 stage: beta
 milestones:
 contact:
-- newamericafoundation/open-covid/issues
+- newamericafoundation/pandemic-response-repository/issues
 team: marklerner
 licenses:
-  open-covid: CC-BY-4.0
+  pandemic-response-repository: CC-BY-4.0
 links:
-- https://newamericafoundation.github.io/open-covid/
+- https://newamericafoundation.github.io/pandemic-response-repository/
 blog:
 
 status:
