@@ -10,13 +10,13 @@ layout: page
 </div>
 <div class="usa-section usa-grid">
 
+  <input type="submit" value="All" onclick="Clear()"/>
   <input type="submit" value="Health" onclick="Search('Health')"/>
   <input type="submit" value="Information" onclick="Search('Information')"/>
   <input type="submit" value="Assistance" onclick="Search('Assistance')"/>
   <input type="submit" value="Tracking" onclick="Search('Tracking')"/>
   <input type="submit" value="Community" onclick="Search('Community')"/>
   <input type="submit" value="Research" onclick="Search('Research')"/>
-  <input type="submit" value="Clear" onclick="Clear()"/>
 
   {% include data-table.html %}
 
