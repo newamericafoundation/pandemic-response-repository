@@ -9,13 +9,13 @@
   <link rel="icon" type="image/png" href="/open-covid/images/favicons/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="/open-covid/images/favicons/favicon-16x16.png" sizes="16x16" />
 
-  <meta name="description" content="Open COVID is a maintained list of open source projects usable by governments.">
+  <meta name="description" content="Pandemic Response Repository is a maintained list of open source projects usable by governments.">
 
   <!-- Open Graph data -->
   <meta property="og:title" content="About" />
   <meta property="og:image" content="https://newamericafoundation.github.io/open-covid/images/NA-Logo.png" />
   <meta property="og:site_name" content="New America" />
-  <meta property="og:description" content="Open COVID is a maintained list of open source projects usable by governments.">
+  <meta property="og:description" content="Pandemic Response Repository is a maintained list of open source projects usable by governments.">
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://newamericafoundation.github.io/open-covid//open-covid/about/" />
 
@@ -25,12 +25,30 @@
   <meta name="twitter:site" content="@DIGI_NewAmerica">
   <meta name="twitter:creator" content="@DIGI_NewAmerica">
   <meta name="twitter:title" content="About">
-  <meta name="twitter:description" content="Open COVID is a maintained list of open source projects usable by governments.">
+  <meta name="twitter:description" content="Pandemic Response Repository is a maintained list of open source projects usable by governments.">
   <meta name="twitter:image" content="https://newamericafoundation.github.io/open-covid/NA-Logo.png" />
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/js/uswds.min.js"></script>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/css/uswds.css">
   <link rel="stylesheet" type="text/css" href="/open-covid/css/styles.css">
+
+  <!-- Table filter setup -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    function Clear() {
+     $('#projectsTable tr').show();
+    }
+
+    function Search(word) {
+      Clear();
+
+      $('#projectsTable tr td.searchcol').each(function () {
+         if ($(this).text().toLowerCase().indexOf(word.toLowerCase()) <= -1) {
+              $(this).parent().hide();
+         }
+      });
+    }
+  </script>
 
   <style>
     @page { 
@@ -95,8 +113,8 @@
 
 <p>The Pandemic Response Repository is the first phase of a more comprehensive Open Source Framework researched and developed by New America to strengthen and modernize government institutions. Across the public sector, private sector, and civil society, there is growing momentum to create open source, digital public goods that can deliver broad benefits for society and be easily modified to meet the needs of different communities. This work is intended to help build that movement. The Pandemic Response Repository is a joint project of the Digital Impact and Governance Initiative (DIGI) and Public Interest Technology (PIT) teams at New America.</p>
 
-<h2 id="contributing-to-open-covid">Contributing to Open COVID</h2>
-<p>If you would like to suggest a new project be added to the collection, <a href="">please use this Google form</a>. If you have general questions about the project, send us an email at <a href="mailto:DIGI@newamerica.org">DIGI@newamerica.org</a>. For more information on the contributing to the source code to the Pandemic Response Repository, see <a href="https://github.com/newamericafoundation/open-covid/">our source code repository for this website</a>.</p>
+<h2 id="contributing-to-pandemic-response-repository">Contributing to Pandemic Response Repository</h2>
+<p>If you would like to suggest a new project be added to the collection, <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQNld7gWcEc8D8tLwyVqUKePMUmZUUKeH41Fx8RXyjQtjWOQ/viewform?usp=sf_link">please use this Google form</a>. If you have general questions about the project, send us an email at <a href="mailto:DIGI@newamerica.org">DIGI@newamerica.org</a>. For more information on the contributing to the source code to the Pandemic Response Repository, see <a href="https://github.com/newamericafoundation/pandemic-response-repository/">our source code repository for this website</a>.</p>
 
 <h2 id="license">License</h2>
 
@@ -109,7 +127,7 @@
     <div class="usa-overlay"></div>
 <footer class="site-footer no-print">
     <div class="usa-grid">
-        <p>This project is maintained by <a href="https://www.newamerica.org/">New America</a>. To share your feedback with us, tweet us at <a href="https://twitter.com/DIGI_NewAmerica">@DIGI_NewAmerica</a> or open an issue or pull request on our <a href="https://github.com/newamericafoundation/open-covid">GitHub repository.</a> New America has not undertaken independent code review of projects listed in this resource.</p>
+        <p>This project is maintained by <a href="https://www.newamerica.org/">New America</a>. To share your feedback with us, tweet us at <a href="https://twitter.com/DIGI_NewAmerica">@DIGI_NewAmerica</a> or open an issue or pull request on our <a href="https://github.com/newamericafoundation/pandemic-response-repository">GitHub repository.</a> New America has not undertaken independent code review of projects listed in this resource.</p>
     </div>
 </footer>
 

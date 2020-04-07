@@ -6,220 +6,177 @@
   </head>
   <body class="layout--figure">
     <div class="figure">
-    <h1 class="figure__title">New America Open COVID Project List</h1>
+    <h1 class="figure__title">Pandemic Response Repository</h1>
 
-    <table class="data-table">
+    <table class="data-table" id="projectsTable">
   <thead>
     <tr>
       <th scope="col">Project title</th>
       <th scope="col">Description</th>
-      <th scope="col">Type of product</th>
+      <th scope="col">Project tags</th>
     </tr>
   </thead>
   <tbody>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/covid-19-self-assessment-tool">COVID-19 Self Assessment Tool</a></th>
-      <td>The tool takes the public through a series of questions to inform those who are concerned they may have contracted COVID-19. It's based on a modified version of the Alberta Health Services tool to which we have applied Ontario design system styling and made a number of functional changes.</td>
+      <td>The questionnaire takes the public through a series of questions to inform those who are concerned they may have contracted COVID-19. It's based on a modified version of the Alberta Health Services tool to which applied Ontario's design system styling and made a number of functional changes.</td>
       <td>Self-assessment</td>
+      <td class="searchcol" style="display: none;">Health</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/tokyo-metropolitan-government-covid-19-countermeasure-site">Tokyo Metropolitan Government COVID-19 Countermeasure Site</a></th>
-      <td>The Tokyo Metropolitan Government created a data visualization website that conveys an updated, digestible dataset to reflect the status of the spread of coronavirus within the city. The website is open source and can and has been replicated by other interested jurisdictions such as San Francisco</td>
-      <td>Informational</td>
+      <td>A data visualization website that conveys an updated, digestible dataset to reflect the status of the spread of coronavirus within the city. The website is open source and can and has been replicated by other interested jurisdictions such as San Francisco.</td>
+      <td>Cases, Testing, Statistics</td>
+      <td class="searchcol" style="display: none;">Tracking</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/dati-covid-19-italia">Dati COVID-19 Italia</a></th>
       <td>Publicly available data on the spread of COVID-19 within Italy.</td>
-      <td>Data</td>
+      <td>Cases, Maps, Statistics</td>
+      <td class="searchcol" style="display: none;">Tracking</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/2019-ncov-data-repository-by-johns-hopkins-csse">2019-nCoV Data Repository by Johns Hopkins CSSE</a></th>
-      <td>This is the data repository for the 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE). Also, Supported by ESRI Living Atlas Team and the Johns Hopkins University Applied Physics Lab (JHU APL).</td>
-      <td>Data</td>
+      <td>This is the data repository for the 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE). It is also supported by the ESRI Living Atlas Team and the Johns Hopkins University Applied Physics Lab (JHU APL).</td>
+      <td>Cases, Maps, Statistics</td>
+      <td class="searchcol" style="display: none;">Tracking</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/covid-19-ask-a-scientist-project">COVID-19 Ask a Scientist Project</a></th>
-      <td>The COVID-19 Ask A Scientist project was developed by the Federation of American Scientists, The Governance Lab at NYU and the New Jersey Office of Innovation and supported by a network of volunteers.</td>
-      <td>Informational</td>
+      <td>Users can instantly find answers to COVID-19 questions by clicking the question mark icon at the bottom of the page, or click the "Ask a scientist your question" button to send unanswered questions to a network of scientists and journalists who have volunteered to respond.</td>
+      <td>FAQs, Benefits</td>
+      <td class="searchcol" style="display: none;">Information, Assistance</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/coronavirus-service-directory">Coronavirus Service Directory</a></th>
       <td>A simple directory of services that can help residents cope if they're staying at home due to the coronavirus pandemic.</td>
-      <td>Local service directory</td>
+      <td>Volunteers, Resource matching</td>
+      <td class="searchcol" style="display: none;">Community</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/sars-cov-2-sequencing-resources">SARS-CoV-2 Sequencing Resources</a></th>
       <td>This document repository is meant to serve as the start of a crowd-sourced collection of information, documentation, protocols and other resources for public health laboratories intending to sequence SARS-CoV-2 coronavirus samples in the coming weeks.</td>
-      <td>Research</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/open-covid/projects/covid-act-now">COVID Act Now</a></th>
-      <td>A site urging Public leaders & health officials to take action now to prevent the spread of COVID-19</td>
-      <td>N/A</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/open-covid/projects/california-coronavirus-covid-19-response">California Coronavirus (COVID-19) Response</a></th>
-      <td>The new website, COVID19.CA.gov, is designed to answer the questions people have and present information that is real time and actionable. It provides a single source of truth for people looking for information about COVID-19 developments and response here in California. As well as a centralized location for simplified policy guidance. It is intended to be simple to understand while providing links back to department websites.</td>
-      <td>Informational</td>
+      <td>Sequencing, Laboratories</td>
+      <td class="searchcol" style="display: none;">Research</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/ncov2019-dataset">nCoV2019 dataset </a></th>
-      <td>Location for summaries and analyses of data related to n-CoV 2019</td>
-      <td>Data</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/open-covid/projects/world-health-organization-app">World Health Organization App</a></th>
-      <td>There is an urgent, global need for an official WHO App to help contain and mitigate COVID-19. The app should support the WHO efforts and be available on a worldwide basis, with information tailored to the user’s location, culture and language. The app should also be sensitive to national needs and respect privacy. Once established, the system can be leveraged to proactively detect, respond early and prevent future pandemics.</td>
-      <td>Informational</td>
+      <td>A location for summaries and analyses of data related to n-CoV 2019.</td>
+      <td>Cases, Maps, Demographics</td>
+      <td class="searchcol" style="display: none;">Tracking</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/sars-cov-2-cases-communicated-by-swiss-cantons-and-principality-of-liechtenstein">SARS-CoV-2 Cases communicated by Swiss Cantons and Principality of Liechtenstein</a></th>
-      <td>Our aim is to create a common official OGD dataset of SARS-CoV-2 cases of the Swiss Authorities. We are providing SARS-CoV-2 case numbers in machine-readable form (CSV) as OGD resources (Open Government Data), that have been published by official sources (Cantons and FL) online. Sources are specifed with the respective URL(s).</td>
-      <td>Data</td>
+      <td>A common official OGD dataset of SARS-CoV-2 cases for the Swiss Authorities. SARS-CoV-2 case numbers are provided in machine-readable form (CSV) as OGD resources (Open Government Data), that have been published by official sources (Cantons and FL) online. Sources are specifed with the respective URL(s).</td>
+      <td>Cases, Statistics</td>
+      <td class="searchcol" style="display: none;">Tracking</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/when-to-call-811">When to call 811</a></th>
-      <td>Self-assesment tool to find out if you should call 811 about COVID-19 for the citizens of Nova Scotia, Canada.</td>
-      <td>Self-assessment</td>
+      <td>Self-assesment tool to determine if residents of Nova Scotia, Canada should call 811 about COVID-19.</td>
+      <td>Screening, Self-assessment</td>
+      <td class="searchcol" style="display: none;">Health</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/findthemasks">FindTheMasks</a></th>
-      <td>Rapid response tech to connect PPE donations with healthcare workers in need.</td>
-      <td>Resource matching</td>
+      <td>Rapid response technology to connect personal protective equipment (PPE) donations with healthcare workers in need.</td>
+      <td>Volunteers, Donations, Medical equipment</td>
+      <td class="searchcol" style="display: none;">Community</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/open-opportunities-platform">Open Opportunities platform</a></th>
-      <td>Open Opportunities is a United States government program that is creating a network of federal employees working together to build a more effective, efficient, responsive government by sharing skills and collaborating on projects that support the mission of an agency or the government as a whole. Here’s how Open Opportunities works - You come up with a great idea that would help your workplace, but you and your coworkers don’t have the skills to execute it. Rather than bringing in a contractor, you can post your project idea to Open Opportunities, where other people within your organization can see it and then work on it, if they’d like.</td>
-      <td>Resource matching</td>
+      <td>A United States government program that is creating a network of federal employees working together to build a more effective, efficient, responsive government by sharing skills and collaborating on projects that support the mission of an agency or the government as a whole.</td>
+      <td>Collaboration, Resource matching, Crowdsourcing</td>
+      <td class="searchcol" style="display: none;">Community</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/gov-uk-notify">GOV.UK Notify</a></th>
-      <td>Send emails, text messages and letters to your users</td>
-      <td>Notification platform</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/open-covid/projects/communicating-clearly">Communicating clearly</a></th>
-      <td>This blog post is about communicating at a difficult time.</td>
-      <td>Guidance</td>
+      <td>Send emails, text messages and letters to users.</td>
+      <td>Notifications</td>
+      <td class="searchcol" style="display: none;">Information</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/find-covid-testing">Find COVID Testing</a></th>
-      <td>Map to make it easy to locate and crowd source COVID-19 testing locations</td>
-      <td>Local service directory</td>
+      <td>A map to make it easy to locate and crowd source COVID-19 testing locations.</td>
+      <td>Maps, Testing, Crowdsourcing</td>
+      <td class="searchcol" style="display: none;">Tracking</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/splunk-coronavirus-dashboard">Splunk Coronavirus Dashboard</a></th>
       <td>This project includes an app that allows users to visualize and analyze information about COVID-19 using data made publicly-available by Johns Hopkins University. </td>
-      <td>Data visualization</td>
+      <td>Cases, Trends, Data visualization</td>
+      <td class="searchcol" style="display: none;">Tracking</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/the-covid-tracking-project">The COVID Tracking Project</a></th>
-      <td>The COVID Tracking Project collects information from 50 US states, the District of Columbia, and 5 other US territories to provide the most comprehensive testing data we can collect for the novel coronavirus, SARS-CoV-2.</td>
-      <td>Data</td>
+      <td>This project collects information from 50 US states, the District of Columbia, and 5 other US territories to provide the most comprehensive testing data we can collect for the novel coronavirus, SARS-CoV-2.</td>
+      <td>Cases, Testing, Maps</td>
+      <td class="searchcol" style="display: none;">Tracking</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/coronavirus-in-the-u-s-latest-map-and-case-count">Coronavirus in the U.S. - Latest Map and Case Count</a></th>
       <td>An ongoing repository of data on coronavirus cases and deaths in the U.S.</td>
-      <td>Data</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/open-covid/projects/foldingathome">Foldingathome</a></th>
-      <td>This repository will contain all input files and generated datasets for the Folding@home efforts to better understand how the SARS-CoV-2 virus that causes COVID-19 can be targeted with small molecule and antibody therapeutics.</td>
-      <td>Research</td>
+      <td>Cases, Maps</td>
+      <td class="searchcol" style="display: none;">Tracking</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/covid-19-novel-coronavirus-infection-map">COVID-19: Novel Coronavirus Infection Map</a></th>
       <td>This online interactive map enables users to track both the global and local trends of Novel Coronavirus infection since Jan 21st, 2020. The dataset is timely collected from multiple official sources and then plotted onto this map.</td>
-      <td>Data visualization</td>
+      <td>Cases, Maps, Trends</td>
+      <td class="searchcol" style="display: none;">Tracking</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/covid-19-scenarios">COVID-19 Scenarios</a></th>
-      <td>The primary purpose of the tool is to explore the dynamics of COVID19 cases and the associated strain on the health care system in the near future.</td>
-      <td>Data visualization</td>
+      <td>This tool explores the dynamics of COVID-19 cases and the associated strain on the healthcare system in the near future.</td>
+      <td>Cases, Modeling, Medical equipment</td>
+      <td class="searchcol" style="display: none;">Tracking</td>
     </tr>
     
     <tr>
-      <th scope="row"><a href="/open-covid/projects/covid-19-dashboards">COVID-19 Dashboards</a></th>
-      <td>This project aims to offer an accessible way for data professionals to share dashboards (that are updated with new data automatically) without requiring any expertise in front end development.</td>
-      <td>Data visualization</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/open-covid/projects/predit-covid">Predit COVID</a></th>
-      <td>Visualize & track the 2020 COVID-19 pandemic by country.</td>
-      <td>Data visualization</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/open-covid/projects/information-collection-platform-for-covid-19-epidemic-prevention">Information Collection Platform for COVID-19 Epidemic Prevention</a></th>
-      <td>This project aims at collecting and gathering information of hospitals, hotels, factories, logistics, donations, contributions, prevention, treatment and any live information regarding national epidemic prevention from reliable sources to help all affected people, organizations better communicate and coordinate with each other to efficiently and effectively fight against the Novel Coronavirus (COVID-19) outbreak that started in Wuhan, Hubei, China.</td>
-      <td>Informational</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/open-covid/projects/guia-de-actuacion-ante-el-coronavirus">Guía de actuación ante el coronavirus</a></th>
-      <td>A guide in Spanish answering questions about coronavirus and self-protection</td>
-      <td>Informational</td>
+      <th scope="row"><a href="/open-covid/projects/california-coronavirus-covid-19-response">California Coronavirus (COVID-19) Response</a></th>
+      <td>COVID19.CA.gov is designed to answer questions and present actionable and real-time information. It provides a single source of truth for people looking for information about COVID-19 developments and response in California, while providing links back to relevant department websites.</td>
+      <td>FAQs, Symptoms, Testing, Benefits</td>
+      <td class="searchcol" style="display: none;">Information, Assistance</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/covid-19-patients-self-monitoring-at-home-via-forms-sent-by-sms">Covid-19 patients' self-monitoring at home via forms sent by SMS</a></th>
-      <td>A team of academics and developers built a patient self-monitoring tool to help health care systems monitor COVID patients remotely using text-based follow up. Medical staff can send patients questionaires to monitor their symptoms as they progress or desist and recommend appropriate medical attention.</td>
-      <td>Patient care</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/open-covid/projects/resto-a-casa-data-monitoring-platform">Resto a casa data monitoring platform</a></th>
-      <td>Resto a Casa provides a user friendly visual representation of the Italian coronavirus crisis and response.</td>
-      <td>Data visualization </td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/open-covid/projects/contact-tracer">Contact Tracer</a></th>
-      <td>A prototype contact tracer app for COVID-19 pandemic response </td>
-      <td>Application</td>
+      <td>A patient self-monitoring tool to help healthcare systems monitor COVID patients remotely using text-based follow up. Medical staff can send patients questionaires to monitor their symptoms as they progress or desist and recommend appropriate medical attention.</td>
+      <td>Self-assessment, Monitoring, Symptoms</td>
+      <td class="searchcol" style="display: none;">Health</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/hamagen-react-native">Hamagen React Native</a></th>
-      <td>Israel's Ministry of Health's COVID-19 Exposure Prevention App</td>
-      <td>N/A</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/open-covid/projects/data-covid-19-sf-bay-area">Data COVID-19 SF Bay Area</a></th>
-      <td>This site was derived from Tokyo COVID-19 Task Force website (https://github.com/tokyo-metropolitan-gov/covid19) for stopping Coronavirus for the Bay Area communities.</td>
-      <td>Informational</td>
+      <td>Israel's Ministry of Health's COVID-19 Exposure Prevention App.</td>
+      <td>FAQs</td>
+      <td class="searchcol" style="display: none;">Health</td>
     </tr>
     
     <tr>
       <th scope="row"><a href="/open-covid/projects/covid-19-hospital-impact-model-for-epidemics">COVID-19 Hospital Impact Model for Epidemics</a></th>
       <td>The CHIME (COVID-19 Hospital Impact Model for Epidemics) Application is designed to assist hospitals and public health officials with understanding hospital capacity needs as they relate to the COVID pandemic.</td>
-      <td>Informational</td>
+      <td>Cases, Statistics, Medical equipment</td>
+      <td class="searchcol" style="display: none;">Information</td>
     </tr>
     
   </tbody>
