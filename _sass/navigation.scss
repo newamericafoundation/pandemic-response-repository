@@ -1,0 +1,41 @@
+nav.navbar {
+	display: block;
+	width: 100%;
+	background-color: white;
+	padding: $base-font-size;
+}
+
+.navbar-container {
+	max-width: 1024px;
+	margin: 0 auto;
+	display: flex;
+	align-items: middle;
+	justify-content: space-between;
+}
+
+.navbar-logo,
+.navbar-links {
+	a {
+		text-decoration: none;
+	}
+}
+
+.navbar-logo,
+.navbar-links {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		font-family: $font-sans;
+	}
+}
+
+.navbar-logo {
+	font-size: $h5-font-size;
+	img {
+		max-width: 100px;
+		height: $h5-font-size;
+	}
+}

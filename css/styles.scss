@@ -1,10 +1,14 @@
 ---
 ---
-@import 'variables';
-@import 'uswds_overrides';
-@import 'screen';
-@import 'category';
-@import 'method';
-@import 'sticky';
-@import 'intro-panel';
-@import 'footer';
+
+@import "variables";
+@import "layouts";
+@import "typography";
+@import "navigation";
+@import "footer";
+
+html,
+body {
+	background: $color-beige;
+	color: #333;
+}

@@ -1,6 +1,8 @@
-.site-footer {
-  background: $color-gray-light;
-  font-size: $small-font-size;
-  padding-bottom: 3rem;
-  padding-top: 3rem;
+#pandemic-response-repository-footer {
+	background: white;
+	padding-bottom: 3rem;
+	padding-top: 3rem;
+	p {
+		font-family: $font-sans;
+	}
 }

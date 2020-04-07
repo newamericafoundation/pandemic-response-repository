@@ -1,0 +1,54 @@
+body {
+	color: $color-black;
+	font-family: "Circular", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-size: $base-font-size;
+}
+
+a {
+	color: $color-black;
+	text-decoration: underline $color-teal;
+	text-decoration-skip-ink: auto;
+	transition: all 0.2s ease-in;
+	&:hover {
+		color: $color-black;
+		text-decoration: underline rgba(255, 255, 255, 0);
+	}
+	&:visited {
+		color: $color-black;
+	}
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4 {
+	font-family: $font-sans;
+}
+
+h1.promo {
+	font-family: "Platform", $font-sans;
+	font-size: $h2-font-size;
+	line-height: $h1-font-size;
+}
+
+@media screen and (max-width: 853.33px) {
+	h1.promo {
+		font-size: $h4-font-size;
+		line-height: $h3-font-size;
+	}
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: $h3-font-size;
+}
+
+thead th {
+	font-family: $font-sans;
+	font-size: $tiny-font-size;
+	text-transform: uppercase;
+	color: $color-black;
+	letter-spacing: 1px;
+}

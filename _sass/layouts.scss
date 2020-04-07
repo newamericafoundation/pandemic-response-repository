@@ -1,0 +1,85 @@
+.pandemic-response-repository-listing ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+.layout--card .method {
+	margin: 0 0 2em 0;
+}
+
+.layout--page main {
+	max-width: 1024px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 60px 25% 60px 15px;
+}
+
+.layout--page.layout--pandemic-response-repository main {
+	padding: 0;
+	max-width: none;
+}
+
+@media screen and (max-width: 853.33px) {
+	.layout--page main {
+		padding: 40px 15px;
+	}
+}
+
+//Index Styles
+.hero-container {
+	padding-top: $h1-font-size;
+}
+
+.table-container {
+	overflow-x: scroll;
+}
+
+//Overwriting USWDS Buttons
+input[type="submit"] {
+	font-family: $font-sans;
+	font-size: $tiny-font-size;
+	text-transform: uppercase;
+	color: $color-black;
+	background-color: $color-beige;
+	border: 1px solid $color-black;
+	padding: $small-font-size;
+	height: auto;
+	transition: all 0.15s ease-out;
+	&:hover {
+		color: white;
+		background-color: $color-black;
+		border-bottom: 1px solid $color-black;
+	}
+	&.usa-button-active {
+		color: white;
+		background-color: $color-black;
+		border-bottom: 1px solid $color-black;
+	}
+}
+
+//Project Styles
+.project {
+	.project--source-link {
+		margin-bottom: $h2-font-size;
+		text-decoration: underline $color-teal;
+		text-decoration-skip-ink: auto;
+		transition: all 0.2s ease-in;
+		font-weight: 300;
+		&:hover {
+			color: $color-black;
+			text-decoration: underline rgba(255, 255, 255, 0);
+		}
+	}
+	.project--label {
+		font-family: $font-sans;
+		font-size: $tiny-font-size;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		display: block;
+		line-height: $base-font-size;
+	}
+	p a {
+		font-weight: 300;
+	}
+}
