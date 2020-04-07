@@ -1,5 +1,5 @@
 // Typography
-$font-sans: "Platform", "Circular", "Lyon", "Arial", "Palatino", sans-serif;
+$font-sans: "Circular", "Lyon", "Arial", "Palatino", sans-serif; //Removed Platform from the stack to prevent over-application
 
 $base-font-size: 15px;
 
@@ -39,3 +39,6 @@ $color-gray-light: #f7f4f2; // NA brand color $color-gray-lightest
 $color-gray-lightest: #fafafa; // 18F brand color $color-gray-hover
 $color-inverse: #fff; // 18F brand color
 $color-black: #333333; // NA brand color
+$color-teal: #2fbcb3; // NA interaction color
+$color-beige: #f7f4f2; // NA bg color
+$color-chart-background: #f5f5f5;
