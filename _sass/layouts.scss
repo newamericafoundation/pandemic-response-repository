@@ -30,6 +30,10 @@
 	padding-top: $h1-font-size;
 }
 
+.table-container {
+	overflow-x: scroll;
+}
+
 //Overwriting USWDS Buttons
 input[type="submit"] {
 	font-family: $font-sans;

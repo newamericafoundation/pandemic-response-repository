@@ -1,19 +1,21 @@
-<table class="data-table" id="projectsTable">
-  <thead>
-    <tr>
-      <th scope="col">Project title</th>
-      <th scope="col">Description</th>
-      <th scope="col">Project tags</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for project in site.data.projects %}
-    <tr>
-      <th scope="row"><a href="{{ site.baseurl }}/projects/{{ project.title | slugify: "latin" }}">{{project.title}}</a></th>
-      <td>{{project.summary}}</td>
-      <td>{{ project.tags | default: "N/A" }}</td>
-      <td class="searchcol" style="display: none;">{{project.topics | default: "N/A"}}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<div class="table-container">
+  <table class="data-table" id="projectsTable">
+    <thead>
+      <tr>
+        <th scope="col">Project title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Project tags</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for project in site.data.projects %}
+      <tr>
+        <th scope="row"><a href="{{ site.baseurl }}/projects/{{ project.title | slugify: "latin" }}">{{project.title}}</a></th>
+        <td>{{project.summary}}</td>
+        <td>{{ project.tags | default: "N/A" }}</td>
+        <td class="searchcol" style="display: none;">{{project.topics | default: "N/A"}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
