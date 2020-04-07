@@ -1,159 +1,224 @@
 <!DOCTYPE html>
-<html lang='en'>
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+	<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Pandemic Response Repository - nCoV2019 dataset </title>
-  <link rel="icon" type="image/png" href="/pandemic-response-repository/images/favicons/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/pandemic-response-repository/images/favicons/favicon-16x16.png" sizes="16x16" />
+	<title>
+		Pandemic Response Repository - nCoV2019 dataset 
+	</title>
+	<link
+		rel="icon"
+		type="image/png"
+		href="/pandemic-response-repository/images/favicons/favicon-32x32.png"
+		sizes="32x32"
+	/>
+	<link
+		rel="icon"
+		type="image/png"
+		href="/pandemic-response-repository/images/favicons/favicon-16x16.png"
+		sizes="16x16"
+	/>
 
-  <meta name="description" content="Pandemic Response Repository is a maintained list of open source projects usable by governments.">
+	<meta
+		name="description"
+		content="Pandemic Response Repository is a maintained list of open source projects usable by governments."
+	/>
 
-  <!-- Open Graph data -->
-  <meta property="og:title" content="nCoV2019 dataset " />
-  <meta property="og:image" content="https://newamericafoundation.github.io/pandemic-response-repository/images/NA-Logo.png" />
-  <meta property="og:site_name" content="New America" />
-  <meta property="og:description" content="Pandemic Response Repository is a maintained list of open source projects usable by governments.">
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://newamericafoundation.github.io/pandemic-response-repository/pandemic-response-repository/projects/ncov2019-dataset/" />
+	<!-- Open Graph data -->
+	<meta
+		property="og:title"
+		content="nCoV2019 dataset "
+	/>
+	<meta
+		property="og:image"
+		content="https://newamericafoundation.github.io/pandemic-response-repository/images/NA-Logo.png"
+	/>
+	<meta property="og:site_name" content="New America" />
+	<meta
+		property="og:description"
+		content="Pandemic Response Repository is a maintained list of open source projects usable by governments."
+	/>
+	<meta property="og:type" content="article" />
+	<meta
+		property="og:url"
+		content="https://newamericafoundation.github.io/pandemic-response-repository/pandemic-response-repository/projects/ncov2019-dataset/"
+	/>
 
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" value="summary" />
+	<meta name="twitter:site" content="@DIGI_NewAmerica" />
+	<meta name="twitter:creator" content="@DIGI_NewAmerica" />
+	<meta
+		name="twitter:title"
+		content="nCoV2019 dataset "
+	/>
+	<meta
+		name="twitter:description"
+		content="Pandemic Response Repository is a maintained list of open source projects usable by governments."
+	/>
+	<meta
+		name="twitter:image"
+		content="https://newamericafoundation.github.io/pandemic-response-repository/NA-Logo.png"
+	/>
 
-  <!-- Twitter Card data -->
-  <meta name="twitter:card" value="summary">
-  <meta name="twitter:site" content="@DIGI_NewAmerica">
-  <meta name="twitter:creator" content="@DIGI_NewAmerica">
-  <meta name="twitter:title" content="nCoV2019 dataset ">
-  <meta name="twitter:description" content="Pandemic Response Repository is a maintained list of open source projects usable by governments.">
-  <meta name="twitter:image" content="https://newamericafoundation.github.io/pandemic-response-repository/NA-Logo.png" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/js/uswds.min.js"></script>
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/css/uswds.css"
+	/>
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href="https://d3fvh0lm0eshry.cloudfront.net/static/css/newamericadotorg.lite.css"
+	/>
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href="/pandemic-response-repository/css/styles.css"
+	/>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/js/uswds.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/css/uswds.css">
-  <link rel="stylesheet" type="text/css" href="/pandemic-response-repository/css/styles.css">
+	<!-- Table filter setup -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		function Clear() {
+			$("#projectsTable tr").show();
 
-  <!-- Table filter setup -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script>
-    function Clear() {
-      $('#projectsTable tr').show();
+			$("input").removeClass("usa-button-active");
+			$('input[value|="All Topics"]').addClass("usa-button-active");
+		}
 
-      $('input').removeClass('usa-button-active');
-      $('input[value|="All Topics"]').addClass('usa-button-active');
-    }
+		function Search(word) {
+			$("#projectsTable tr").show();
 
-    function Search(word) {
-      $('#projectsTable tr').show();
+			$("#projectsTable tr td.searchcol").each(function () {
+				if (
+					$(this).text().toLowerCase().indexOf(word.toLowerCase()) <=
+					-1
+				) {
+					$(this).parent().hide();
+				}
+			});
 
-      $('#projectsTable tr td.searchcol').each(function () {
-         if ($(this).text().toLowerCase().indexOf(word.toLowerCase()) <= -1) {
-              $(this).parent().hide();
-         }
-      });
+			$("input").removeClass("usa-button-active");
+			$("input[value|=" + word + "]").addClass("usa-button-active");
+		}
+	</script>
 
-      $('input').removeClass('usa-button-active');
-      $('input[value|=' + word + ']').addClass('usa-button-active');
-    }
-  </script>
+	<style>
+		@page {
+			size: portrait;
+			margin: 1in;
+		}
+	</style>
 
-  <style>
-    @page { 
-      size: portrait; 
-      margin: 1in;
-    }
-  </style>
+	<link
+		rel="canonical"
+		href="/pandemic-response-repository/projects/ncov2019-dataset/"
+	/>
+	<link rel="alternate" type="application/rss+xml" title=""
+	href="/pandemic-response-repository/feed.xml" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script
+		async
+		src="https://www.googletagmanager.com/gtag/js?id=UA-368921-43"
+	></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
 
-  <link rel="canonical" href="/pandemic-response-repository/projects/ncov2019-dataset/">
-  <link rel="alternate" type="application/rss+xml" title="" href="/pandemic-response-repository/feed.xml" />
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-368921-43"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-368921-43');
-  </script>
-  <!-- End Google Analytics -->
+		gtag("config", "UA-368921-43");
+	</script>
+	<!-- End Google Analytics -->
 </head>
 
-  <body class="layout--card">
-    
-<a class="usa-skipnav" href="#main">Skip to main content</a>
-
-<header role="banner" class="banner">
-<div class="usa-header usa-header-extended">
-<div class="usa-navbar">
-  <button class="usa-menu-btn">Menu</button>
-  <div class="usa-logo" id="logo">
-    <em class="usa-logo-text">
-      <a href="/pandemic-response-repository/" accesskey="1" title="Home" aria-label="Home">  <img src="/pandemic-response-repository/images/NA-logo-black.svg" width="200"> Pandemic Response Repository</a>
-    </em>
-  </div>
-</div>
-</div>
-</header>
-<div class="usa-header usa-header-extended sticky">
-<nav role="navigation" class="usa-nav">
-  <div class="usa-nav-inner">
-
-        <button class="usa-nav-close">
-          <img src="/pandemic-response-repository/images/uswds-0.14.0/close.svg" alt="close">
-        </button>
-        
-        <div class="usa-nav-secondary">
-         <ul class="usa-unstyled-list usa-nav-secondary-links">
-           <li>
-               <a href="/pandemic-response-repository/about">About</a>
-           </li>
-         </ul>
-       </div>
-  </div>
+	<body class="layout--page">
+		<nav role="navigation" class="navbar">
+	<div class="navbar-container">
+		<div class="navbar-logo" id="logo">
+			<a href="/pandemic-response-repository/" accesskey="1" title="Home" aria-label="Home">
+				<img src="/pandemic-response-repository/images/NA-logo-black.svg" width="200">
+				Pandemic Response Repository</a>
+		</div>
+		<div class="navbar-links">
+			<ul>
+				<li>
+					<a href="/pandemic-response-repository/about">About</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 </nav>
-</div>
 
-    <main id="main" role="main">
-      <section class="category usa-section" id="">
-        <header class="category--header">
-          <div class="usa-grid">
-            <h1 class="category--title">nCoV2019 dataset </h1>
-            <p class="category--subtitle"><a href="https://github.com/beoutbreakprepared/nCoV2019">https://github.com/beoutbreakprepared/nCoV2019</a></p>
-          </div>
-        </header>
-        <div class="usa-grid">
-          <h2>Summary</h2>
-          <p>A location for summaries and analyses of data related to n-CoV 2019.</p>
-          <p><b>Type of product: </b></p>
-          <p><b>Platform: </b>Raw Data</p>
-          <p><b>Initial audience: </b>Medical researchers</p>
-          <p><b>Author: </b>Institute for Health Metrics and Evaluation, University of Washington</p>
+		<main id="main" role="main">
+			<section class="project id=">
+				<header class="project--header">
+					<h1 class="project--title">nCoV2019 dataset </h1>
+					<h3 class="project--source-link">
+						<a href="https://github.com/beoutbreakprepared/nCoV2019">https://github.com/beoutbreakprepared/nCoV2019</a>
+					</h3>
+				</header>
+				<h2>Summary</h2>
+				<p>A location for summaries and analyses of data related to n-CoV 2019.</p>
+				<p>
+					<span class="project--label">Type of product: </span>
+				</p>
+				<p>
+					<span class="project--label">Platform: </span>Raw Data
+				</p>
+				<p>
+					<span class="project--label">Initial audience: </span>Medical researchers
+				</p>
+				<p>
+					<span class="project--label">Author: </span>Institute for Health Metrics and Evaluation, University of Washington
+				</p>
 
-          
-          <p><b>Link to live product: </b><a href="https://healthmap.org/covid-19/">https://healthmap.org/covid-19/</a></p>
-          
+				
+				<p>
+					<span class="project--label">Link to live product: </span><a href="https://healthmap.org/covid-19/">https://healthmap.org/covid-19/</a>
+				</p>
+				 
+				<p>
+					<span class="project--label">Main point of contact: </span>pigottdm@uw.edu
+				</p>
+				 
+				<p>
+					<span class="project--label">Link to community support: </span><a href="None">None</a>
+				</p>
+				
 
-          
-          <p><b>Main point of contact: </b>pigottdm@uw.edu</p>
-          
-
-          
-          <p><b>Link to community support: </b><a href="None">None</a></p>
-          
-
-          <p><b>License: </b>MIT</p>
-          <p><b>Do they have contributor guidelines: </b>No</p>
-          <p><b>Is the project documented: </b>Yes</p>
-        </div>
-      </section>
-    </main>
-    <div class="usa-overlay"></div>
-<footer class="site-footer no-print">
-    <div class="usa-grid">
-        <p>This project is maintained by <a href="https://www.newamerica.org/">New America</a>. To share your feedback with us, tweet us at <a href="https://twitter.com/DIGI_NewAmerica">@DIGI_NewAmerica</a> or open an issue or pull request on our <a href="https://github.com/newamericafoundation/pandemic-response-repository">GitHub repository.</a> New America has not undertaken independent code review of projects listed in this resource.</p>
-    </div>
+				<p>
+					<span class="project--label">License: </span>MIT
+				</p>
+				<p>
+					<span class="project--label">Do they have contributor guidelines: </span>No
+				</p>
+				<p>
+					<span class="project--label">Is the project documented: </span>Yes
+				</p>
+			</section>
+		</main>
+		<footer id="pandemic-response-repository-footer" class="site-footer">
+	<div class="usa-grid">
+		<p>
+			This project is maintained by
+			<a href="https://www.newamerica.org/">New America</a>. To share your
+			feedback with us, tweet us at
+			<a href="https://twitter.com/DIGI_NewAmerica">@DIGI_NewAmerica</a>
+			or open an issue or pull request on our
+			<a href="https://github.com/newamericafoundation/pandemic-response-repository">GitHub repository.</a>
+			New America has not undertaken independent code review of projects
+			listed in this resource.
+		</p>
+	</div>
 </footer>
 
 <!--<script src="/pandemic-response-repository/assets/js/site.js"/>-->
 
-  </body>
+	</body>
 </html>

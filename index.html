@@ -1,315 +1,369 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Pandemic Response Repository - Pandemic Response Repository</title>
-  <link rel="icon" type="image/png" href="/pandemic-response-repository/images/favicons/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/pandemic-response-repository/images/favicons/favicon-16x16.png" sizes="16x16" />
+	<title>
+		Pandemic Response Repository - Pandemic Response Repository
+	</title>
+	<link
+		rel="icon"
+		type="image/png"
+		href="/pandemic-response-repository/images/favicons/favicon-32x32.png"
+		sizes="32x32"
+	/>
+	<link
+		rel="icon"
+		type="image/png"
+		href="/pandemic-response-repository/images/favicons/favicon-16x16.png"
+		sizes="16x16"
+	/>
 
-  <meta name="description" content="Pandemic Response Repository is a maintained list of open source projects usable by governments.">
+	<meta
+		name="description"
+		content="Pandemic Response Repository is a maintained list of open source projects usable by governments."
+	/>
 
-  <!-- Open Graph data -->
-  <meta property="og:title" content="Pandemic Response Repository" />
-  <meta property="og:image" content="https://newamericafoundation.github.io/pandemic-response-repository/images/NA-Logo.png" />
-  <meta property="og:site_name" content="New America" />
-  <meta property="og:description" content="Pandemic Response Repository is a maintained list of open source projects usable by governments.">
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://newamericafoundation.github.io/pandemic-response-repository/pandemic-response-repository/" />
+	<!-- Open Graph data -->
+	<meta
+		property="og:title"
+		content="Pandemic Response Repository"
+	/>
+	<meta
+		property="og:image"
+		content="https://newamericafoundation.github.io/pandemic-response-repository/images/NA-Logo.png"
+	/>
+	<meta property="og:site_name" content="New America" />
+	<meta
+		property="og:description"
+		content="Pandemic Response Repository is a maintained list of open source projects usable by governments."
+	/>
+	<meta property="og:type" content="article" />
+	<meta
+		property="og:url"
+		content="https://newamericafoundation.github.io/pandemic-response-repository/pandemic-response-repository/"
+	/>
 
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" value="summary" />
+	<meta name="twitter:site" content="@DIGI_NewAmerica" />
+	<meta name="twitter:creator" content="@DIGI_NewAmerica" />
+	<meta
+		name="twitter:title"
+		content="Pandemic Response Repository"
+	/>
+	<meta
+		name="twitter:description"
+		content="Pandemic Response Repository is a maintained list of open source projects usable by governments."
+	/>
+	<meta
+		name="twitter:image"
+		content="https://newamericafoundation.github.io/pandemic-response-repository/NA-Logo.png"
+	/>
 
-  <!-- Twitter Card data -->
-  <meta name="twitter:card" value="summary">
-  <meta name="twitter:site" content="@DIGI_NewAmerica">
-  <meta name="twitter:creator" content="@DIGI_NewAmerica">
-  <meta name="twitter:title" content="Pandemic Response Repository">
-  <meta name="twitter:description" content="Pandemic Response Repository is a maintained list of open source projects usable by governments.">
-  <meta name="twitter:image" content="https://newamericafoundation.github.io/pandemic-response-repository/NA-Logo.png" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/js/uswds.min.js"></script>
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/css/uswds.css"
+	/>
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href="https://d3fvh0lm0eshry.cloudfront.net/static/css/newamericadotorg.lite.css"
+	/>
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href="/pandemic-response-repository/css/styles.css"
+	/>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/js/uswds.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/css/uswds.css">
-  <link rel="stylesheet" type="text/css" href="/pandemic-response-repository/css/styles.css">
+	<!-- Table filter setup -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		function Clear() {
+			$("#projectsTable tr").show();
 
-  <!-- Table filter setup -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script>
-    function Clear() {
-      $('#projectsTable tr').show();
+			$("input").removeClass("usa-button-active");
+			$('input[value|="All Topics"]').addClass("usa-button-active");
+		}
 
-      $('input').removeClass('usa-button-active');
-      $('input[value|="All Topics"]').addClass('usa-button-active');
-    }
+		function Search(word) {
+			$("#projectsTable tr").show();
 
-    function Search(word) {
-      $('#projectsTable tr').show();
+			$("#projectsTable tr td.searchcol").each(function () {
+				if (
+					$(this).text().toLowerCase().indexOf(word.toLowerCase()) <=
+					-1
+				) {
+					$(this).parent().hide();
+				}
+			});
 
-      $('#projectsTable tr td.searchcol').each(function () {
-         if ($(this).text().toLowerCase().indexOf(word.toLowerCase()) <= -1) {
-              $(this).parent().hide();
-         }
-      });
+			$("input").removeClass("usa-button-active");
+			$("input[value|=" + word + "]").addClass("usa-button-active");
+		}
+	</script>
 
-      $('input').removeClass('usa-button-active');
-      $('input[value|=' + word + ']').addClass('usa-button-active');
-    }
-  </script>
+	<style>
+		@page {
+			size: portrait;
+			margin: 1in;
+		}
+	</style>
 
-  <style>
-    @page { 
-      size: portrait; 
-      margin: 1in;
-    }
-  </style>
+	<link
+		rel="canonical"
+		href="/pandemic-response-repository/"
+	/>
+	<link rel="alternate" type="application/rss+xml" title=""
+	href="/pandemic-response-repository/feed.xml" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script
+		async
+		src="https://www.googletagmanager.com/gtag/js?id=UA-368921-43"
+	></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
 
-  <link rel="canonical" href="/pandemic-response-repository/">
-  <link rel="alternate" type="application/rss+xml" title="" href="/pandemic-response-repository/feed.xml" />
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-368921-43"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-368921-43');
-  </script>
-  <!-- End Google Analytics -->
+		gtag("config", "UA-368921-43");
+	</script>
+	<!-- End Google Analytics -->
 </head>
 
   <body class="layout--page layout--pandemic-response-repository">
-    
-<a class="usa-skipnav" href="#main">Skip to main content</a>
-
-<header role="banner" class="banner">
-<div class="usa-header usa-header-extended">
-<div class="usa-navbar">
-  <button class="usa-menu-btn">Menu</button>
-  <div class="usa-logo" id="logo">
-    <em class="usa-logo-text">
-      <a href="/pandemic-response-repository/" accesskey="1" title="Home" aria-label="Home">  <img src="/pandemic-response-repository/images/NA-logo-black.svg" width="200"> Pandemic Response Repository</a>
-    </em>
-  </div>
-</div>
-</div>
-</header>
-<div class="usa-header usa-header-extended sticky">
-<nav role="navigation" class="usa-nav">
-  <div class="usa-nav-inner">
-
-        <button class="usa-nav-close">
-          <img src="/pandemic-response-repository/images/uswds-0.14.0/close.svg" alt="close">
-        </button>
-        
-        <div class="usa-nav-secondary">
-         <ul class="usa-unstyled-list usa-nav-secondary-links">
-           <li>
-               <a href="/pandemic-response-repository/about">About</a>
-           </li>
-         </ul>
-       </div>
-  </div>
+    <nav role="navigation" class="navbar">
+	<div class="navbar-container">
+		<div class="navbar-logo" id="logo">
+			<a href="/pandemic-response-repository/" accesskey="1" title="Home" aria-label="Home">
+				<img src="/pandemic-response-repository/images/NA-logo-black.svg" width="200">
+				Pandemic Response Repository</a>
+		</div>
+		<div class="navbar-links">
+			<ul>
+				<li>
+					<a href="/pandemic-response-repository/about">About</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 </nav>
-</div>
 
     <main id="main" role="main">
-      <div class="usa-section intro-header">
-  <div class="usa-grid">
-    <p class="usa-font-lead no-print">A collection of open source digital resources to help governments respond to the Coronavirus.</p>
-  </div>
+      <div class="hero-container">
+	<div class="usa-grid">
+		<h1 class="promo">
+			A collection of open source digital resources to help governments
+			respond to the Coronavirus.
+		</h1>
+	</div>
 </div>
 <div class="usa-section usa-grid">
+	<input class="usa-button-active" type="submit" value="All Topics" onclick="Clear()">
+	<input type="submit" value="Health" onclick="Search('Health')">
+	<input type="submit" value="Information" onclick="Search('Information')">
+	<input type="submit" value="Assistance" onclick="Search('Assistance')">
+	<input type="submit" value="Tracking" onclick="Search('Tracking')">
+	<input type="submit" value="Community" onclick="Search('Community')">
+	<input type="submit" value="Research" onclick="Search('Research')">
 
-  <input class="usa-button-active" type="submit" value="All Topics" onclick="Clear()">
-  <input type="submit" value="Health" onclick="Search('Health')">
-  <input type="submit" value="Information" onclick="Search('Information')">
-  <input type="submit" value="Assistance" onclick="Search('Assistance')">
-  <input type="submit" value="Tracking" onclick="Search('Tracking')">
-  <input type="submit" value="Community" onclick="Search('Community')">
-  <input type="submit" value="Research" onclick="Search('Research')">
-
+	<div class="table-container">
   <table class="data-table" id="projectsTable">
-  <thead>
-    <tr>
-      <th scope="col">Project title</th>
-      <th scope="col">Description</th>
-      <th scope="col">Project tags</th>
-    </tr>
-  </thead>
-  <tbody>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/2019-ncov-data-repository-by-johns-hopkins-csse">2019-nCoV Data Repository by Johns Hopkins CSSE</a></th>
-      <td>This is the data repository for the 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE). It is also supported by the ESRI Living Atlas Team and the Johns Hopkins University Applied Physics Lab (JHU APL).</td>
-      <td>Cases, Maps, Statistics</td>
-      <td class="searchcol" style="display: none;">Tracking</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/california-coronavirus-covid-19-response">California Coronavirus (COVID-19) Response</a></th>
-      <td>COVID19.CA.gov is designed to answer questions and present actionable and real-time information. It provides a single source of truth for people looking for information about COVID-19 developments and response in California, while providing links back to relevant department websites.</td>
-      <td>FAQs, Symptoms, Testing, Benefits</td>
-      <td class="searchcol" style="display: none;">Information, Assistance</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/coronavirus-in-the-u-s-latest-map-and-case-count">Coronavirus in the U.S. - Latest Map and Case Count</a></th>
-      <td>An ongoing repository of data on coronavirus cases and deaths in the U.S.</td>
-      <td>Cases, Maps</td>
-      <td class="searchcol" style="display: none;">Tracking</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/coronavirus-service-directory">Coronavirus Service Directory</a></th>
-      <td>A simple directory of services that can help residents cope if they're staying at home due to the coronavirus pandemic.</td>
-      <td>Volunteers, Resource matching</td>
-      <td class="searchcol" style="display: none;">Community</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/covid-19-ask-a-scientist-project">COVID-19 Ask a Scientist Project</a></th>
-      <td>Users can instantly find answers to COVID-19 questions by clicking the question mark icon at the bottom of the page, or click the "Ask a scientist your question" button to send unanswered questions to a network of scientists and journalists who have volunteered to respond.</td>
-      <td>FAQs, Benefits</td>
-      <td class="searchcol" style="display: none;">Information, Assistance</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/covid-19-hospital-impact-model-for-epidemics">COVID-19 Hospital Impact Model for Epidemics</a></th>
-      <td>The CHIME (COVID-19 Hospital Impact Model for Epidemics) Application is designed to assist hospitals and public health officials with understanding hospital capacity needs as they relate to the COVID pandemic.</td>
-      <td>Cases, Statistics, Medical equipment</td>
-      <td class="searchcol" style="display: none;">Information</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/covid-19-patients-self-monitoring-at-home-via-forms-sent-by-sms">Covid-19 patients' self-monitoring at home via forms sent by SMS</a></th>
-      <td>A patient self-monitoring tool to help healthcare systems monitor COVID patients remotely using text-based follow up. Medical staff can send patients questionaires to monitor their symptoms as they progress or desist and recommend appropriate medical attention.</td>
-      <td>Self-assessment, Monitoring, Symptoms</td>
-      <td class="searchcol" style="display: none;">Health</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/covid-19-scenarios">COVID-19 Scenarios</a></th>
-      <td>This tool explores the dynamics of COVID-19 cases and the associated strain on the healthcare system in the near future.</td>
-      <td>Cases, Modeling, Medical equipment</td>
-      <td class="searchcol" style="display: none;">Tracking</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/covid-19-self-assessment-tool">COVID-19 Self Assessment Tool</a></th>
-      <td>The questionnaire takes the public through a series of questions to inform those who are concerned they may have contracted COVID-19. It's based on a modified version of the Alberta Health Services tool to which applied Ontario's design system styling and made a number of functional changes.</td>
-      <td>Self-assessment</td>
-      <td class="searchcol" style="display: none;">Health</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/covid-19-novel-coronavirus-infection-map">COVID-19: Novel Coronavirus Infection Map</a></th>
-      <td>This online interactive map enables users to track both the global and local trends of Novel Coronavirus infection since Jan 21st, 2020. The dataset is timely collected from multiple official sources and then plotted onto this map.</td>
-      <td>Cases, Maps, Trends</td>
-      <td class="searchcol" style="display: none;">Tracking</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/dati-covid-19-italia">Dati COVID-19 Italia</a></th>
-      <td>Publicly available data on the spread of COVID-19 within Italy.</td>
-      <td>Cases, Maps, Statistics</td>
-      <td class="searchcol" style="display: none;">Tracking</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/find-covid-testing">Find COVID Testing</a></th>
-      <td>A map to make it easy to locate and crowd source COVID-19 testing locations.</td>
-      <td>Maps, Testing, Crowdsourcing</td>
-      <td class="searchcol" style="display: none;">Tracking</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/findthemasks">FindTheMasks</a></th>
-      <td>Rapid response technology to connect personal protective equipment (PPE) donations with healthcare workers in need.</td>
-      <td>Volunteers, Donations, Medical equipment</td>
-      <td class="searchcol" style="display: none;">Community</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/gov-uk-notify">GOV.UK Notify</a></th>
-      <td>Send emails, text messages and letters to users.</td>
-      <td>Notifications</td>
-      <td class="searchcol" style="display: none;">Information</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/hamagen-react-native">Hamagen React Native</a></th>
-      <td>Israel's Ministry of Health's COVID-19 Exposure Prevention App.</td>
-      <td>FAQs</td>
-      <td class="searchcol" style="display: none;">Health</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/ncov2019-dataset">nCoV2019 dataset </a></th>
-      <td>A location for summaries and analyses of data related to n-CoV 2019.</td>
-      <td>Cases, Maps, Demographics</td>
-      <td class="searchcol" style="display: none;">Tracking</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/open-opportunities-platform">Open Opportunities platform</a></th>
-      <td>A United States government program that is creating a network of federal employees working together to build a more effective, efficient, responsive government by sharing skills and collaborating on projects that support the mission of an agency or the government as a whole.</td>
-      <td>Collaboration, Resource matching, Crowdsourcing</td>
-      <td class="searchcol" style="display: none;">Community</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/sars-cov-2-cases-communicated-by-swiss-cantons-and-principality-of-liechtenstein">SARS-CoV-2 Cases communicated by Swiss Cantons and Principality of Liechtenstein</a></th>
-      <td>A common official OGD dataset of SARS-CoV-2 cases for the Swiss Authorities. SARS-CoV-2 case numbers are provided in machine-readable form (CSV) as OGD resources (Open Government Data), that have been published by official sources (Cantons and FL) online. Sources are specifed with the respective URL(s).</td>
-      <td>Cases, Statistics</td>
-      <td class="searchcol" style="display: none;">Tracking</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/sars-cov-2-sequencing-resources">SARS-CoV-2 Sequencing Resources</a></th>
-      <td>This document repository is meant to serve as the start of a crowd-sourced collection of information, documentation, protocols and other resources for public health laboratories intending to sequence SARS-CoV-2 coronavirus samples in the coming weeks.</td>
-      <td>Sequencing, Laboratories</td>
-      <td class="searchcol" style="display: none;">Research</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/splunk-coronavirus-dashboard">Splunk Coronavirus Dashboard</a></th>
-      <td>This project includes an app that allows users to visualize and analyze information about COVID-19 using data made publicly-available by Johns Hopkins University. </td>
-      <td>Cases, Trends, Data visualization</td>
-      <td class="searchcol" style="display: none;">Tracking</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/the-covid-tracking-project">The COVID Tracking Project</a></th>
-      <td>This project collects information from 50 US states, the District of Columbia, and 5 other US territories to provide the most comprehensive testing data we can collect for the novel coronavirus, SARS-CoV-2.</td>
-      <td>Cases, Testing, Maps</td>
-      <td class="searchcol" style="display: none;">Tracking</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/tokyo-metropolitan-government-covid-19-countermeasure-site">Tokyo Metropolitan Government COVID-19 Countermeasure Site</a></th>
-      <td>A data visualization website that conveys an updated, digestible dataset to reflect the status of the spread of coronavirus within the city. The website is open source and can and has been replicated by other interested jurisdictions such as San Francisco.</td>
-      <td>Cases, Testing, Statistics</td>
-      <td class="searchcol" style="display: none;">Tracking</td>
-    </tr>
-    
-    <tr>
-      <th scope="row"><a href="/pandemic-response-repository/projects/when-to-call-811">When to call 811</a></th>
-      <td>Self-assesment tool to determine if residents of Nova Scotia, Canada should call 811 about COVID-19.</td>
-      <td>Screening, Self-assessment</td>
-      <td class="searchcol" style="display: none;">Health</td>
-    </tr>
-    
-  </tbody>
-</table>
-
+    <thead>
+      <tr>
+        <th scope="col">Project title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Project tags</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/2019-ncov-data-repository-by-johns-hopkins-csse">2019-nCoV Data Repository by Johns Hopkins CSSE</a></th>
+        <td>This is the data repository for the 2019 Novel Coronavirus Visual Dashboard operated by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE). It is also supported by the ESRI Living Atlas Team and the Johns Hopkins University Applied Physics Lab (JHU APL).</td>
+        <td>Cases, Maps, Statistics</td>
+        <td class="searchcol" style="display: none;">Tracking</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/california-coronavirus-covid-19-response">California Coronavirus (COVID-19) Response</a></th>
+        <td>COVID19.CA.gov is designed to answer questions and present actionable and real-time information. It provides a single source of truth for people looking for information about COVID-19 developments and response in California, while providing links back to relevant department websites.</td>
+        <td>FAQs, Symptoms, Testing, Benefits</td>
+        <td class="searchcol" style="display: none;">Information, Assistance</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/coronavirus-in-the-u-s-latest-map-and-case-count">Coronavirus in the U.S. - Latest Map and Case Count</a></th>
+        <td>An ongoing repository of data on coronavirus cases and deaths in the U.S.</td>
+        <td>Cases, Maps</td>
+        <td class="searchcol" style="display: none;">Tracking</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/coronavirus-service-directory">Coronavirus Service Directory</a></th>
+        <td>A simple directory of services that can help residents cope if they're staying at home due to the coronavirus pandemic.</td>
+        <td>Volunteers, Resource matching</td>
+        <td class="searchcol" style="display: none;">Community</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/covid-19-ask-a-scientist-project">COVID-19 Ask a Scientist Project</a></th>
+        <td>Users can instantly find answers to COVID-19 questions by clicking the question mark icon at the bottom of the page, or click the "Ask a scientist your question" button to send unanswered questions to a network of scientists and journalists who have volunteered to respond.</td>
+        <td>FAQs, Benefits</td>
+        <td class="searchcol" style="display: none;">Information, Assistance</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/covid-19-hospital-impact-model-for-epidemics">COVID-19 Hospital Impact Model for Epidemics</a></th>
+        <td>The CHIME (COVID-19 Hospital Impact Model for Epidemics) Application is designed to assist hospitals and public health officials with understanding hospital capacity needs as they relate to the COVID pandemic.</td>
+        <td>Cases, Statistics, Medical equipment</td>
+        <td class="searchcol" style="display: none;">Information</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/covid-19-patients-self-monitoring-at-home-via-forms-sent-by-sms">Covid-19 patients' self-monitoring at home via forms sent by SMS</a></th>
+        <td>A patient self-monitoring tool to help healthcare systems monitor COVID patients remotely using text-based follow up. Medical staff can send patients questionaires to monitor their symptoms as they progress or desist and recommend appropriate medical attention.</td>
+        <td>Self-assessment, Monitoring, Symptoms</td>
+        <td class="searchcol" style="display: none;">Health</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/covid-19-scenarios">COVID-19 Scenarios</a></th>
+        <td>This tool explores the dynamics of COVID-19 cases and the associated strain on the healthcare system in the near future.</td>
+        <td>Cases, Modeling, Medical equipment</td>
+        <td class="searchcol" style="display: none;">Tracking</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/covid-19-self-assessment-tool">COVID-19 Self Assessment Tool</a></th>
+        <td>The questionnaire takes the public through a series of questions to inform those who are concerned they may have contracted COVID-19. It's based on a modified version of the Alberta Health Services tool to which applied Ontario's design system styling and made a number of functional changes.</td>
+        <td>Self-assessment</td>
+        <td class="searchcol" style="display: none;">Health</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/covid-19-novel-coronavirus-infection-map">COVID-19: Novel Coronavirus Infection Map</a></th>
+        <td>This online interactive map enables users to track both the global and local trends of Novel Coronavirus infection since Jan 21st, 2020. The dataset is timely collected from multiple official sources and then plotted onto this map.</td>
+        <td>Cases, Maps, Trends</td>
+        <td class="searchcol" style="display: none;">Tracking</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/dati-covid-19-italia">Dati COVID-19 Italia</a></th>
+        <td>Publicly available data on the spread of COVID-19 within Italy.</td>
+        <td>Cases, Maps, Statistics</td>
+        <td class="searchcol" style="display: none;">Tracking</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/find-covid-testing">Find COVID Testing</a></th>
+        <td>A map to make it easy to locate and crowd source COVID-19 testing locations.</td>
+        <td>Maps, Testing, Crowdsourcing</td>
+        <td class="searchcol" style="display: none;">Tracking</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/findthemasks">FindTheMasks</a></th>
+        <td>Rapid response technology to connect personal protective equipment (PPE) donations with healthcare workers in need.</td>
+        <td>Volunteers, Donations, Medical equipment</td>
+        <td class="searchcol" style="display: none;">Community</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/gov-uk-notify">GOV.UK Notify</a></th>
+        <td>Send emails, text messages and letters to users.</td>
+        <td>Notifications</td>
+        <td class="searchcol" style="display: none;">Information</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/hamagen-react-native">Hamagen React Native</a></th>
+        <td>Israel's Ministry of Health's COVID-19 Exposure Prevention App.</td>
+        <td>FAQs</td>
+        <td class="searchcol" style="display: none;">Health</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/ncov2019-dataset">nCoV2019 dataset </a></th>
+        <td>A location for summaries and analyses of data related to n-CoV 2019.</td>
+        <td>Cases, Maps, Demographics</td>
+        <td class="searchcol" style="display: none;">Tracking</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/open-opportunities-platform">Open Opportunities platform</a></th>
+        <td>A United States government program that is creating a network of federal employees working together to build a more effective, efficient, responsive government by sharing skills and collaborating on projects that support the mission of an agency or the government as a whole.</td>
+        <td>Collaboration, Resource matching, Crowdsourcing</td>
+        <td class="searchcol" style="display: none;">Community</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/sars-cov-2-cases-communicated-by-swiss-cantons-and-principality-of-liechtenstein">SARS-CoV-2 Cases communicated by Swiss Cantons and Principality of Liechtenstein</a></th>
+        <td>A common official OGD dataset of SARS-CoV-2 cases for the Swiss Authorities. SARS-CoV-2 case numbers are provided in machine-readable form (CSV) as OGD resources (Open Government Data), that have been published by official sources (Cantons and FL) online. Sources are specifed with the respective URL(s).</td>
+        <td>Cases, Statistics</td>
+        <td class="searchcol" style="display: none;">Tracking</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/sars-cov-2-sequencing-resources">SARS-CoV-2 Sequencing Resources</a></th>
+        <td>This document repository is meant to serve as the start of a crowd-sourced collection of information, documentation, protocols and other resources for public health laboratories intending to sequence SARS-CoV-2 coronavirus samples in the coming weeks.</td>
+        <td>Sequencing, Laboratories</td>
+        <td class="searchcol" style="display: none;">Research</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/splunk-coronavirus-dashboard">Splunk Coronavirus Dashboard</a></th>
+        <td>This project includes an app that allows users to visualize and analyze information about COVID-19 using data made publicly-available by Johns Hopkins University. </td>
+        <td>Cases, Trends, Data visualization</td>
+        <td class="searchcol" style="display: none;">Tracking</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/the-covid-tracking-project">The COVID Tracking Project</a></th>
+        <td>This project collects information from 50 US states, the District of Columbia, and 5 other US territories to provide the most comprehensive testing data we can collect for the novel coronavirus, SARS-CoV-2.</td>
+        <td>Cases, Testing, Maps</td>
+        <td class="searchcol" style="display: none;">Tracking</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/tokyo-metropolitan-government-covid-19-countermeasure-site">Tokyo Metropolitan Government COVID-19 Countermeasure Site</a></th>
+        <td>A data visualization website that conveys an updated, digestible dataset to reflect the status of the spread of coronavirus within the city. The website is open source and can and has been replicated by other interested jurisdictions such as San Francisco.</td>
+        <td>Cases, Testing, Statistics</td>
+        <td class="searchcol" style="display: none;">Tracking</td>
+      </tr>
+      
+      <tr>
+        <th scope="row"><a href="/pandemic-response-repository/projects/when-to-call-811">When to call 811</a></th>
+        <td>Self-assesment tool to determine if residents of Nova Scotia, Canada should call 811 about COVID-19.</td>
+        <td>Screening, Self-assessment</td>
+        <td class="searchcol" style="display: none;">Health</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
 </div>
 
     </main>
-    <div class="usa-overlay"></div>
-<footer class="site-footer no-print">
-    <div class="usa-grid">
-        <p>This project is maintained by <a href="https://www.newamerica.org/">New America</a>. To share your feedback with us, tweet us at <a href="https://twitter.com/DIGI_NewAmerica">@DIGI_NewAmerica</a> or open an issue or pull request on our <a href="https://github.com/newamericafoundation/pandemic-response-repository">GitHub repository.</a> New America has not undertaken independent code review of projects listed in this resource.</p>
-    </div>
+    <footer id="pandemic-response-repository-footer" class="site-footer">
+	<div class="usa-grid">
+		<p>
+			This project is maintained by
+			<a href="https://www.newamerica.org/">New America</a>. To share your
+			feedback with us, tweet us at
+			<a href="https://twitter.com/DIGI_NewAmerica">@DIGI_NewAmerica</a>
+			or open an issue or pull request on our
+			<a href="https://github.com/newamericafoundation/pandemic-response-repository">GitHub repository.</a>
+			New America has not undertaken independent code review of projects
+			listed in this resource.
+		</p>
+	</div>
 </footer>
 
 <!--<script src="/pandemic-response-repository/assets/js/site.js"/>-->
