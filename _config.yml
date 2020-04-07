@@ -1,7 +1,7 @@
 markdown: kramdown
 kramdown:
   parse_block_html: true
-name: Open COVID
+name: Pandemic Response Repository
 exclude:
 - CONTRIBUTING.md
 - Gemfile
@@ -18,25 +18,25 @@ sass:
   style: compressed
 
 site:
-  title: Open COVID
+  title: Pandemic Response Repository
 
 page_gen:
   - data: 'projects'
     template: 'projects'
     name: 'title'
 
-description: Open COVID is a maintained list of open source projects usable by governments.
+description: Pandemic Response Repository is a maintained list of open source projects usable by governments.
 
 baseurl: /open-covid
 
 repos:
-- name: Open COVID
+- name: Pandemic Response Repository
   description: Main repository
-  url: https://github.com/newamericafoundation/open-covid
+  url: https://github.com/newamericafoundation/pandemic-response-repository
 
 jekyll_get:
   - data: releases
-    json: 'https://api.github.com/repos/newamericafoundation/open-covid/releases'
+    json: 'https://api.github.com/repos/newamericafoundation/pandemic-response-repository/releases'
 
 plugins:
   - jekyll-last-modified-at
