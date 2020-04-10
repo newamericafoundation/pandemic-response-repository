@@ -6,68 +6,76 @@
 		<main id="main" role="main">
 			<section class="project id="">
 				<header class="project--header">
+					<p class="project--tags">
+						<span class="project--type">{{ page.type-of-product | default: "N/A"}}</span> ∙ {{ page.tags }}
+					</p>
 					<h1 class="project--title">{{ page.title }}</h1>
-					<h3 class="project--source-link">
-						<a href="{{ page.link-to-source }}"
+					<div class="project--link">
+						<span class="project--link-tag">Repository</span>
+						<a href="{{ page.link-to-source }}" class="project--url"
 							>{{ page.link-to-source }}</a
 						>
-					</h3>
+					</div>
+					{% if page.link-to-live-product %}
+					<div class="project--link">
+						<span class="project--link-tag">Live Site</span>
+						<a href="{{ page.link-to-live-product }}" class="project--url"
+							>{{ page.link-to-live-product }}</a
+						>
+					</div>
+					{% endif %} 
 				</header>
 				<h2>Summary</h2>
-				<p>{{ page.summary }}</p>
-				<p>
-					<span class="project--label">Type of product: </span>{{
-					page.type-of-product }}
-				</p>
-				<p>
-					<span class="project--label">Platform: </span>{{
-					page.platform }}
-				</p>
-				<p>
-					<span class="project--label">Initial audience: </span>{{
-					page.initial-audience }}
-				</p>
-				<p>
-					<span class="project--label">Author: </span>{{
-					page.organizing-org }}
-				</p>
+				<p class="project--summary">{{ page.summary }}</p>
+				<div class="project--details">
+					<div class="detail-column">
+						<p>
+							<span class="project--label">Platform </span>{{
+							page.platform }}
+						</p>
+						<p>
+							<span class="project--label">Initial audience </span>{{
+							page.initial-audience }}
+						</p>
+						<p>
+							<span class="project--label">Author </span>{{
+							page.organizing-org }}
+						</p>
 
-				{% if page.link-to-live-product %}
-				<p>
-					<span class="project--label">Link to live product: </span
-					><a href="{{ page.link-to-live-product }}"
-						>{{ page.link-to-live-product }}</a
-					>
-				</p>
-				{% endif %} {% if page.main-poc %}
-				<p>
-					<span class="project--label">Main point of contact: </span
-					>{{ page.main-poc }}
-				</p>
-				{% endif %} {% if page.link-to-community %}
-				<p>
-					<span class="project--label"
-						>Link to community support: </span
-					><a href="{{ page.link-to-community }}"
-						>{{ page.link-to-community }}</a
-					>
-				</p>
-				{% endif %}
+						{% if page.main-poc %}
+						<p>
+							<span class="project--label">Main point of contact </span
+							>{{ page.main-poc }}
+						</p>
+						{% endif %}
+					</div>
+					<div class="detail-column">
+						{% if page.link-to-community %}
+						<p>
+							<span class="project--label"
+								>Link to community support </span
+							><a href="{{ page.link-to-community }}"
+								>{{ page.link-to-community }}</a
+							>
+						</p>
+						{% endif %}
 
-				<p>
-					<span class="project--label">License: </span>{{ page.license
-					| default: "No license provided."}}
-				</p>
-				<p>
-					<span class="project--label"
-						>Do they have contributor guidelines: </span
-					>{{ page.contributor-guides | default: "N/A" }}
-				</p>
-				<p>
-					<span class="project--label"
-						>Is the project documented: </span
-					>{{ page.documentation | default: "N/A" }}
-				</p>
+						<p>
+							<span class="project--label">License </span>{{ page.license
+							| default: "No license provided."}}
+						</p>
+						<p>
+							<span class="project--label"
+								>Do they have contributor guidelines? </span
+							>{{ page.contributor-guides | default: "N/A" }}
+						</p>
+						<p>
+							<span class="project--label"
+								>Is the project documented? </span
+							>{{ page.documentation | default: "N/A" }}
+						</p>
+					</div>
+				</div>
 			</section>
 		</main>
 		{% include footer.html %}

@@ -59,8 +59,40 @@ input[type="submit"] {
 
 //Project Styles
 .project {
-	.project--source-link {
-		margin-bottom: $h2-font-size;
+	.project--title {
+		margin-bottom: $h5-font-size;
+	}
+
+	.project--link {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-bottom: $base-font-size;
+		&:last-child {
+			margin-bottom: $h3-font-size;
+		}
+		@media screen and (max-width: 600px) {
+			align-items: flex-start;
+			flex-direction: column;
+			margin-bottom: $h3-font-size;
+		}
+	}
+
+	.project--link-tag {
+		background-color: $color-teal;
+		padding: 0.5rem;
+		font-size: $tiny-font-size;
+		border-radius: 3px;
+		white-space: nowrap;
+		margin-right: $base-font-size;
+		color: white;
+		line-height: $base-font-size;
+		@media screen and (max-width: 600px) {
+			margin-bottom: $base-font-size;
+		}
+	}
+
+	.project--url {
 		text-decoration: underline $color-teal;
 		text-decoration-skip-ink: auto;
 		transition: all 0.2s ease-in;
@@ -70,14 +102,33 @@ input[type="submit"] {
 			text-decoration: underline rgba(255, 255, 255, 0);
 		}
 	}
+	.project--tags {
+		font-family: $font-sans;
+		font-size: $tiny-font-size;
+		margin-bottom: $h6-font-size;
+	}
+
+	.project--type {
+		font-family: "Lyon", "Circular", "Times", serif;
+		font-style: italic;
+	}
+
+	.project--details {
+		display: flex;
+		flex-direction: row;
+		@media screen and (max-width: 600px) {
+			flex-direction: column;
+		}
+		.detail-column {
+			flex: 1;
+		}
+	}
 	.project--label {
 		font-family: $font-sans;
 		font-size: $tiny-font-size;
 		font-weight: bold;
-		text-transform: uppercase;
-		letter-spacing: 1px;
 		display: block;
-		line-height: $base-font-size;
+		line-height: $small-font-size;
 	}
 	p a {
 		font-weight: 300;
