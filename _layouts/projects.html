@@ -7,15 +7,20 @@
 			<section class="project id="">
 				<header class="project--header">
 					<p class="project--tags">
-						<span class="project--type">{{ page.type-of-product | default: "N/A"}}</span> ∙ {{ page.tags }}
+						{% if page.type-of-product %}
+						<span class="project--type">{{ page.type-of-product}} ∙ </span>
+						{% endif %} 
+						{{ page.tags }}
 					</p>
 					<h1 class="project--title">{{ page.title }}</h1>
+					{% if page.link-to-source %}
 					<div class="project--link">
 						<span class="project--link-tag">Repository</span>
 						<a href="{{ page.link-to-source }}" class="project--url"
 							>{{ page.link-to-source }}</a
 						>
 					</div>
+					{% endif %}
 					{% if page.link-to-live-product %}
 					<div class="project--link">
 						<span class="project--link-tag">Live Site</span>
@@ -37,10 +42,12 @@
 							<span class="project--label">Initial audience </span>{{
 							page.initial-audience }}
 						</p>
+						{% if page.organizing-org %}
 						<p>
 							<span class="project--label">Author </span>{{
 							page.organizing-org }}
 						</p>
+						{% endif %}
 
 						{% if page.main-poc %}
 						<p>
