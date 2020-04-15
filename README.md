@@ -39,7 +39,7 @@ You should be able to see the site at: `http://localhost:4000/`
 
 ### License
 
-This work is licensed under a [Creative Commons Attribution 4.0 International
+This work is licensed under the [Creative Commons Attribution 4.0 International
 License][cc-by].
 
 [![CC BY 4.0][cc-by-image]][cc-by]
