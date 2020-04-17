@@ -11,6 +11,7 @@ We recognize that when we list projects on this repository, we are giving them a
 - Built, run, or maintained by or on behalf of government.
 - Open source and available to the public.
 - Currently in use to assist in the response efforts against the coronavirus.
+<br/><br/>
 
 ### Built, run, or maintained by or on behalf of government.
 
