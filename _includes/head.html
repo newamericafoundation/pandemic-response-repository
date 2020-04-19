@@ -81,22 +81,25 @@
 
 	<!-- Table filter setup -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 	<script>
 		function Clear() {
-			$("#projectsTable tr").show();
-
+			$("#projects .project-item").show();
 			$("input").removeClass("usa-button-active");
 			$('input[value|="All Topics"]').addClass("usa-button-active");
 		}
 
-		function Search(word) {
-			$("#projectsTable tr").show();
 
-			$("#projectsTable tr td.searchcol").each(function () {
+		function Search(word) {
+			$("#projects .project-item").show();
+
+			$("#projects .project-item .searchcol").each(function () {
+
 				if (
 					$(this).text().toLowerCase().indexOf(word.toLowerCase()) <=
 					-1
 				) {
+
 					$(this).parent().hide();
 				}
 			});
@@ -105,6 +108,7 @@
 			$("input[value|=" + word + "]").addClass("usa-button-active");
 		}
 	</script>
+
 
 	<style>
 		@page {
