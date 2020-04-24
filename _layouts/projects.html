@@ -6,82 +6,110 @@
 		<main id="main" role="main">
 			<section class="project id="">
 				<header class="project--header">
-					<p class="project--tags">
-						{% if page.topics %}
-						<span class="project--type">{{ page.topics }} ∙ </span>
-						{% endif %} 
-						{{ page.tags }}
-					</p>
+
 					<h1 class="project--title">{{ page.title }}</h1>
+
+					<div class="project--tags">
+						{% if page.topics %}
+							<div class="topics tags">
+								<h5>Toppics</h5>
+								<span>
+									{{ page.topics | replace: "," , "</span><span>" }}
+								</span>
+							</div>
+						{% endif %}
+
+						{% if page.tags %}
+							<div class="tags">
+								<h5>Tags</h5>
+								<span>
+									{{ page.tags | replace: "," , "</span><span>" }}
+								</span>
+							</div>
+						{% endif %}
+					</div>
+
 					{% if page.link-to-source %}
-					<div class="project--link">
-						<span class="project--link-tag">Repository</span>
-						<a href="{{ page.link-to-source }}" class="project--url"
+					<div class="link">
+						<h5>Repository</h5>
+						<a href="{{ page.link-to-source }}"
 							>{{ page.link-to-source }}</a
 						>
 					</div>
 					{% endif %}
 					{% if page.link-to-live-product %}
-					<div class="project--link">
-						<span class="project--link-tag">Live Site</span>
-						<a href="{{ page.link-to-live-product }}" class="project--url"
+					<div class="link">
+						<h5>Live Site</h5>
+						<a href="{{ page.link-to-live-product }}"
 							>{{ page.link-to-live-product }}</a
 						>
 					</div>
-					{% endif %} 
+					{% endif %}
 				</header>
-				<h2>Summary</h2>
-				<p class="project--summary">{{ page.summary }}</p>
+				<div class="project--summary">
+					<h2>Summary</h2>
+					<p>{{ page.summary }}</p>
+				</div>
+
 				<div class="project--details">
-					<div class="detail-column">
-						<p>
-							<span class="project--label">Platform </span>{{
-							page.platform }}
-						</p>
-						<p>
-							<span class="project--label">Initial audience </span>{{
-							page.initial-audience }}
-						</p>
+
+						{% if page.platform %}
+						<div class="project--detail">
+							<h5>Platform</h5>
+							<p>{{page.platform }}</p>
+						</div>
+						{% endif %}
+
+						{% if page.initial-audience %}
+						<div class="project--detail">
+							<h5>Initial audience </h5>
+							<p>{{page.initial-audience }}</p>
+						</div>
+						{% endif %}
+
 						{% if page.organizing-org %}
-						<p>
-							<span class="project--label">Author </span>{{
-							page.organizing-org }}
-						</p>
+						<div class="project--detail">
+							<h5>Author</h5></h5>
+							<p>{{page.organizing-org }}</p>
+						</div>
 						{% endif %}
 
 						{% if page.main-poc %}
-						<p>
-							<span class="project--label">Main point of contact </span
-							>{{ page.main-poc }}
-						</p>
-						{% endif %}
-					</div>
-					<div class="detail-column">
-						{% if page.link-to-community %}
-						<p>
-							<span class="project--label"
-								>Link to community support </span
-							><a href="{{ page.link-to-community }}"
-								>{{ page.link-to-community }}</a
-							>
-						</p>
+						<div class="project--detail">
+							<h5>Main point of contact</h5>
+							<p>{{ page.main-poc }}</p>
+						</div>
 						{% endif %}
 
-						<p>
-							<span class="project--label">License </span>{{ page.license
-							| default: "No license provided."}}
-						</p>
-						<p>
-							<span class="project--label"
-								>Do they have contributor guidelines? </span
-							>{{ page.contributor-guides | default: "N/A" }}
-						</p>
-						<p>
-							<span class="project--label"
-								>Is the project documented? </span
-							>{{ page.documentation | default: "N/A" }}
-						</p>
-					</div>
+						{% if page.link-to-community %}
+						<div class="project--detail">
+							<h5>Link to community support</h5>
+							<p><a href="{{ page.link-to-community }}">{{ page.link-to-community }}</a></p>
+						</div>
+						{% endif %}
+
+						{% if page.license %}
+						<div class="project--detail">
+							<h5>License</h5>
+							<p>{{ page.license | default: "No license provided."}}</p>
+						</div>
+
+						{% endif %}
+
+						{% if page.license %}
+						<div class="project--detail">
+							<h5>Do they have contributor guidelines?</h5>
+							<p>{{ page.contributor-guides | default: "N/A" }}</p>
+						</div>
+						{% endif %}
+
+						{% if page.documentation %}
+						<div class="project--detail">
+							<h5>Is the project documented?</h5>
+							<p>{{ page.documentation | default: "N/A" }}</p>
+						</div>
+						{% endif %}
+
 				</div>
 			</section>
 		</main>

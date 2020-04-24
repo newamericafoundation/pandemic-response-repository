@@ -1,0 +1,36 @@
+<div class="projects" id="projects">
+    {% for project in site.data.projects %}
+    <div class="project-item">
+          <a class="title" href="{{ site.baseurl }}/projects/{{ project.title | slugify: "latin" }}">{{project.title}}</a>
+
+          {% if project.topics %}
+            <div class="topics tags">
+              <span>
+                {{ project.topics | replace: "," , "</span><span>" }}
+              </span>
+            </div>
+          {% endif %}
+
+          {% if project.tags %}
+            <div class="tags">
+              <span>
+                {{ project.tags | replace: "," , "</span><span>" }}
+              </span>
+            </div>
+          {% endif %}
+
+          {% if project.organizing-org %}
+          <div class="project--detail author">
+            <h5>Author</h5>
+            <p>{{project.organizing-org }}</p>
+          </div>
+          {% endif %}
+
+          <p class="summary">{{project.summary | truncate: 150}}</p>
+
+          <a class="readmore" href="{{ site.baseurl }}/projects/{{ project.title | slugify: "latin" }}">READ MORE ></a>
+
+      <span class="searchcol" style="display: none;">{{project.topics | default: "N/A"}}</span>
+    </div>
+    {% endfor %}
+</div>
