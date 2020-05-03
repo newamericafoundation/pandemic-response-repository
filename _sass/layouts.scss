@@ -11,7 +11,7 @@
 	max-width: 1024px;
 	margin: 0 auto;
 	box-sizing: border-box;
-	padding: 60px 25% 60px 15px;
+	padding: 60px 15px;
 }
 
 .layout--page.layout--pandemic-response-repository main {
@@ -59,6 +59,35 @@ input[type="submit"] {
 
 //Project Styles
 .project {
+	.project-container {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
+	.project-container-body {
+		max-width: 75%;
+		padding-right: $h3-font-size;
+	}
+	.project-container-aside {
+		width: 25%;
+		background-color: white;
+		height: auto;
+		max-height: 100%;
+		padding: $base-font-size;
+	}
+
+	@media screen and (max-width: 853.33px) {
+		.project-container-body,
+		.project-container-aside {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.project-container-body {
+			padding: 0;
+		}
+	}
+
 	.project--title {
 		margin-bottom: $h5-font-size;
 	}
