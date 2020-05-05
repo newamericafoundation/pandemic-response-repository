@@ -41,3 +41,14 @@ nav.navbar {
 		height: $h5-font-size;
 	}
 }
+
+.navbar-button {
+	cursor: pointer;
+	border: 1px solid $color-black;
+	padding: 0.6rem;
+	border-radius: 3px;
+	&:hover {
+		color: white;
+		background-color: $color-black;
+	}
+}
