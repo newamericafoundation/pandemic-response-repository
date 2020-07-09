@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>
+		Pandemic Response Repository - OpenSafely
+	</title>
+	<link
+		rel="icon"
+		type="image/png"
+		href="/pandemic-response-repository/images/favicons/favicon-32x32.png"
+		sizes="32x32"
+	/>
+	<link
+		rel="icon"
+		type="image/png"
+		href="/pandemic-response-repository/images/favicons/favicon-16x16.png"
+		sizes="16x16"
+	/>
+
+	<meta
+		name="description"
+		content="Pandemic Response Repository is a maintained list of open source projects usable by governments."
+	/>
+
+	<!-- Open Graph data -->
+	<meta
+		property="og:title"
+		content="OpenSafely"
+	/>
+	<meta
+		property="og:image"
+		content="https://newamericafoundation.github.io/pandemic-response-repository/images/NA-Logo.png"
+	/>
+	<meta property="og:site_name" content="New America" />
+	<meta
+		property="og:description"
+		content="Pandemic Response Repository is a maintained list of open source projects usable by governments."
+	/>
+	<meta property="og:type" content="article" />
+	<meta
+		property="og:url"
+		content="https://newamericafoundation.github.io/pandemic-response-repository/pandemic-response-repository/projects/opensafely/"
+	/>
+
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" value="summary" />
+	<meta name="twitter:site" content="@DIGI_NewAmerica" />
+	<meta name="twitter:creator" content="@DIGI_NewAmerica" />
+	<meta
+		name="twitter:title"
+		content="OpenSafely"
+	/>
+	<meta
+		name="twitter:description"
+		content="Pandemic Response Repository is a maintained list of open source projects usable by governments."
+	/>
+	<meta
+		name="twitter:image"
+		content="https://newamericafoundation.github.io/pandemic-response-repository/NA-Logo.png"
+	/>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/js/uswds.min.js"></script>
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/uswds/1.3.1/css/uswds.css"
+	/>
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href="https://d3fvh0lm0eshry.cloudfront.net/static/css/newamericadotorg.lite.css"
+	/>
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href="/pandemic-response-repository/css/styles.css"
+	/>
+
+	<!-- Table filter setup -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		function Clear() {
+			$("#projectsTable tr").show();
+
+			$("input").removeClass("usa-button-active");
+			$('input[value|="All Topics"]').addClass("usa-button-active");
+		}
+
+		function Search(word) {
+			$("#projectsTable tr").show();
+
+			$("#projectsTable tr td.searchcol").each(function () {
+				if (
+					$(this).text().toLowerCase().indexOf(word.toLowerCase()) <=
+					-1
+				) {
+					$(this).parent().hide();
+				}
+			});
+
+			$("input").removeClass("usa-button-active");
+			$("input[value|=" + word + "]").addClass("usa-button-active");
+		}
+	</script>
+
+	<style>
+		@page {
+			size: portrait;
+			margin: 1in;
+		}
+	</style>
+
+	<link
+		rel="canonical"
+		href="/pandemic-response-repository/projects/opensafely/"
+	/>
+	<link rel="alternate" type="application/rss+xml" title=""
+	href="/pandemic-response-repository/feed.xml" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script
+		async
+		src="https://www.googletagmanager.com/gtag/js?id=UA-368921-43"
+	></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "UA-368921-43");
+	</script>
+	<!-- End Google Analytics -->
+</head>
+
+	<body class="layout--page">
+		<nav role="navigation" class="navbar">
+	<div class="navbar-container">
+		<div class="navbar-logo" id="logo">
+			<a href="/pandemic-response-repository/" accesskey="1" title="Home" aria-label="Home">
+				<img src="/pandemic-response-repository/images/NA-logo-black.svg" width="200">
+				Pandemic Response Repository</a>
+		</div>
+		<div class="navbar-links">
+			<ul>
+				<li>
+					<a href="/pandemic-response-repository/about">About</a>
+				</li>
+				<li>
+					<a href="/pandemic-response-repository/why-oss">Why OSS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+		<main id="main" role="main">
+			<section class="project id=">
+				<header class="project--header">
+					<p class="project--tags">
+						
+						<span class="project--type">Research ∙ </span>
+						 
+						Cases, Statistics
+					</p>
+					<h1 class="project--title">OpenSafely</h1>
+					
+					<div class="project--link">
+						<span class="project--link-tag">Repository</span>
+						<a href="https://github.com/opensafely" class="project--url">https://github.com/opensafely</a>
+					</div>
+					
+					
+					<div class="project--link">
+						<span class="project--link-tag">Live Site</span>
+						<a href="https://opensafely.org" class="project--url">https://opensafely.org</a>
+					</div>
+					 
+				</header>
+				<h2>Summary</h2>
+				<p class="project--summary">OpenSAFELY is a new secure analytics platform for electronic health records in the NHS, created to deliver urgent results during the global COVID-19 emergency. It is now successfully delivering analyses across more than 24 million patients’ full pseudonymised primary care NHS records, with more to follow shortly.</p>
+				<div class="project--details">
+					<div class="detail-column">
+						<p>
+							<span class="project--label">Platform </span>
+						</p>
+						<p>
+							<span class="project--label">Initial audience </span>
+						</p>
+						
+						<p>
+							<span class="project--label">Author </span>National Health Service, United Kingdom
+						</p>
+						
+
+						
+						<p>
+							<span class="project--label">Main point of contact </span>team@opensafely.org
+						</p>
+						
+					</div>
+					<div class="detail-column">
+						
+						<p>
+							<span class="project--label">Link to community support </span><a href="@opensafely">@opensafely</a>
+						</p>
+						
+
+						<p>
+							<span class="project--label">License </span>GPL-3.0
+						</p>
+						<p>
+							<span class="project--label">Do they have contributor guidelines? </span>No
+						</p>
+						<p>
+							<span class="project--label">Is the project documented? </span>Yes
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer id="pandemic-response-repository-footer" class="site-footer">
+	<div class="usa-grid">
+		<p>
+			This project is maintained by
+			<a href="https://www.newamerica.org/">New America</a>. To share your
+			feedback with us, tweet us at
+			<a href="https://twitter.com/DIGI_NewAmerica">@DIGI_NewAmerica</a>
+			or open an issue or pull request on our
+			<a href="https://github.com/newamericafoundation/pandemic-response-repository">GitHub repository.</a>
+			New America has not undertaken independent code review of projects
+			listed in this resource.
+		</p>
+	</div>
+</footer>
+
+<!--<script src="/pandemic-response-repository/assets/js/site.js"/>-->
+
+	</body>
+</html>
