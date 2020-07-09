@@ -1,5 +1,8 @@
 language: ruby
-# install: bundle
+install:
+  - bundle
+  - bundle install
+  - gem install jekyll
 branches:
   only:
     - master
