@@ -1,11 +1,10 @@
 language: ruby
-install:
-  - bundle
-cache: bundler
+# install: bundle
 branches:
   only:
     - master
 script: bundle exec jekyll build # or  - JEKYLL_ENV=production bundle exec jekyll build --destination site
+cache: bundler
 
 deploy:
   provider: pages
@@ -23,7 +22,7 @@ deploy:
 
 #env:
 #  global:
-#s    - secure: ...
+#    - secure: ...
 
 # script:
 #   - jgd -u git@github.com:newamericafoundation/pandemicresponserepository.git
