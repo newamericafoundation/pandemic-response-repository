@@ -4,7 +4,7 @@ before_install:
 branches:
   only:
     - master
-script: wget -O _data/projects.csv $CSV_LINK && bundle exec jekyll build
+script: echo $CSV_LINK; wget -O _data/projects.csv $CSV_LINK && bundle exec jekyll build
 cache: bundler
 
 deploy:
