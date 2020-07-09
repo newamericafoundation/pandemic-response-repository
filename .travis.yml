@@ -1,13 +1,15 @@
 language: ruby
-install:
-  - gem install bundler -v 2.1.4
-  - bundle
-  - bundle install
-  - gem install jekyll
+before_install:
+  - gem install bundler
+#install:
+#  - gem install bundler -v 2.1.4
+#  - bundle
+#  - bundle install
+#  - gem install jekyll
 branches:
   only:
     - master
-script: bundle exec jekyll build # or  - JEKYLL_ENV=production bundle exec jekyll build --destination site
+script: bundle exec jekyll build
 cache: bundler
 
 deploy:
@@ -18,15 +20,3 @@ deploy:
   keep-history: true
   on:
     branch: master
-
-
-
-
-
-
-#env:
-#  global:
-#    - secure: ...
-
-# script:
-#   - jgd -u git@github.com:newamericafoundation/pandemicresponserepository.git
