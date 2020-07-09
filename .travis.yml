@@ -1,22 +1,22 @@
 language: ruby
-install:
-  - bundle
-  - bundle install
-  - gem install jekyll
-branches:
-  only:
-    - master
-script: bundle exec jekyll build # or  - JEKYLL_ENV=production bundle exec jekyll build --destination site
-cache: bundler
+#install:
+#  - bundle
+#  - bundle install
+#  - gem install jekyll
+#branches:
+#  only:
+#    - master
+#script: bundle exec jekyll build # or  - JEKYLL_ENV=production bundle exec jekyll build --destination site
+#cache: bundler
 
-deploy:
-  provider: pages
-  local-dir: ./_site
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  on:
-    branch: master
+#deploy:
+#  provider: pages
+#  local-dir: ./_site
+#  skip-cleanup: true
+#  github-token: $GITHUB_TOKEN
+#  keep-history: true
+#  on:
+#    branch: master
 
 
 
