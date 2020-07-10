@@ -4,8 +4,12 @@ before_install:
 branches:
   only:
     - master
-script: echo $CSV_LINK; wget -O _data/projects.csv $CSV_LINK && bundle exec jekyll build
+script: wget -O _data/projects.csv $DATA_URL && bundle exec jekyll build
 cache: bundler
+
+env:
+  global:
+    - DATA_URL="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_b1JHv2liFqe3O11xqSd1toMoIdGMwq9F1M4Uz1f9VhQIufsBvGveBxWVstvrZgp9lKqUgtLRLvQQ/pub?gid=0&single=true&output=csv"
 
 deploy:
   provider: pages
