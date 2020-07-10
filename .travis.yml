@@ -11,6 +11,9 @@ env:
   global:
     - DATA_URL="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_b1JHv2liFqe3O11xqSd1toMoIdGMwq9F1M4Uz1f9VhQIufsBvGveBxWVstvrZgp9lKqUgtLRLvQQ/pub?gid=0&single=true&output=csv"
 
+notifications:
+  email: false
+
 deploy:
   provider: pages
   local-dir: ./_site
