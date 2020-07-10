@@ -1,5 +1,6 @@
 # New America Pandemic Response Repository
 [![CC BY 4.0][cc-by-shield]][cc-by]
+[![Build Status](https://www.travis-ci.org/newamericafoundation/pandemic-response-repository.svg?branch=master)](https://www.travis-ci.org/newamericafoundation/pandemic-response-repository)
 
 [New America](https://www.newamerica.org/) is maintaining a running list of all government open source projects responding to the novel Coronavirus.
 
